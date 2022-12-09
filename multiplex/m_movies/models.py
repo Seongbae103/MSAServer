@@ -14,3 +14,4 @@ class M_movie(models.Model):
         return f'{self.pk} {self.title} {self.director} {self.description}' \
                f' {self.poster_url} {self.running_time} {self.age_rating}'
 # Create your models here.
+
