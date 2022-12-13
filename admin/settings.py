@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     "blog",
     "multiplex",
     "shop",
-    "rest_framework"
+    "rest_framework",
 ]
 
 # CORS 관련 추가
