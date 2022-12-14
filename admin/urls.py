@@ -19,8 +19,9 @@ from admin.views import hello
 
 urlpatterns = [
     path('', hello),
-    path('blog/auth/', include('blog.b_users.urls')),
+    path('blog/', include('blog.b_users.urls')),
     path('multiplex/m_movies/', include('multiplex.m_movies.urls')),
     path('blog/stroke/', include('blog.stroke.urls')),
-    path('shop/', include('shop.iris.urls'))
+    path('shop/iris/', include('shop.iris.urls'))
+    # path('파일경로/', include('경로.urls'))
 ]
