@@ -22,5 +22,6 @@ urlpatterns = [
     path('blog/auth/', include('blog.b_users.urls')),
     path('multiplex/m_movies/', include('multiplex.m_movies.urls')),
     path('blog/stroke/', include('blog.stroke.urls')),
-    path('shop/', include('shop.iris.urls'))
+    path('shop/', include('shop.iris.urls')),
+    path('shop/fashion', include('shop.urls'))
 ]
