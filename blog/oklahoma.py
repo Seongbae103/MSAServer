@@ -58,7 +58,7 @@ oklahoma_menu = {
 }
 class Oklahoma():
     def __init__(self):
-        self.oklahoma = pd.read_csv('./data/dam_crime/comb32.csv')
+        self.oklahoma = pd.read_csv('data/dam_crime/comb32.csv')
         self.oklahoma_home = None
 
     def spec(self):

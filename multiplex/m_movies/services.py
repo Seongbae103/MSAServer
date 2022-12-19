@@ -43,14 +43,14 @@ class DcGan(object):
     def __init__(self):
         # Root directory for dataset
         self.dataroot = r'C:\Users\AIA\PycharmProjects\djangoRestProject\multiplex\data'
-        # Number of workers for dataloader
+        # number of workers for dataloader
         self.workers = 2
         # Batch size during training
         self.batch_size = 128
         # Spatial size of training images. All images will be resized to this
         #   size using a transformer.
         self.image_size = 64
-        # Number of channels in the training images. For color images this is 3
+        # number of channels in the training images. For color images this is 3
         self.nc = 3
         # Size of z latent vector (i.e. size of generator input)
         self.nz = 100
@@ -58,13 +58,13 @@ class DcGan(object):
         self.ngf = 64
         # Size of feature maps in discriminator
         self.ndf = 64
-        # Number of training epochs
+        # number of training epochs
         self.num_epochs = 1
         # Learning rate for optimizers
         self.lr = 0.0002
         # Beta1 hyperparam for Adam optimizers
         self.beta1 = 0.5
-        # Number of GPUs available. Use 0 for CPU mode.
+        # number of GPUs available. Use 0 for CPU mode.
         self.ngpu = 1
         self.manualSeed = 999
         self.device = None

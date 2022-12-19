@@ -69,7 +69,7 @@ dtypes: float64(3), int64(4), object(5)
 class StrokeService:
     def __init__(self):
 
-        self.stroke = pd.read_csv(r'C:\Users\AIA\PycharmProjects\djangoRestProject\blog\data\healthcare-dataset-stroke-data.csv')
+        self.stroke = pd.read_csv(r'/api/dlearn/blog/data/healthcare-dataset-stroke-data.csv')
 
         self.my_stroke = self.stroke.rename(columns=stroke_meta)
         self.adult_stroke = copy.deepcopy(self.my_stroke)
@@ -166,7 +166,7 @@ class StrokeService:
 
     def targetting(self):
 
-        df = pd.read_csv(r'C:\Users\AIA\PycharmProjects\djangoRestProject\blog\save\stroke.csv')
+        df = pd.read_csv(r'/api/dlearn/blog/save/stroke.csv')
         self.data = df.drop(['뇌졸중'], axis=1)
         self.data = self.data.drop(['아이디'], axis=1) # 오버피팅 방지를 위해 아이디 삭제
         self.target = df['뇌졸중']

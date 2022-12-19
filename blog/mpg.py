@@ -60,11 +60,11 @@ my_meta = {
     "class": "차종"
 }
 
-mpg = pd.read_csv('./data/dam_pd_samples/mpg.csv')
+mpg = pd.read_csv('data/dam_pd_samples/mpg.csv')
 
 class MpgService(object):
     def __init__(self):
-        self.mpg = pd.read_csv('./data/dam_pd_samples/mpg.csv')
+        self.mpg = pd.read_csv('data/dam_pd_samples/mpg.csv')
         self.my_mpg = None
         self.count_test = None
     def menu_1(self):

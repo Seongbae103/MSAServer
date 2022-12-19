@@ -147,7 +147,7 @@ class Crime:
         crime.loc[crime['관서명'] == '방배서', ['구별']] = '서초구'
         crime.loc[crime['관서명'] == '수서서', ['구별']] = '강남구'
         crime.to_pickle('./save/police_pos.pkl')
-        print(pd.read_pickle('./save/police_pos.pkl'))
+        print(pd.read_pickle('save/police_pos.pkl'))
 
     def save_cctv_pop(self): # 3
         cctv = self.cctv
@@ -187,10 +187,10 @@ class Crime:
                                     [-0.13607433  1.        ]]                        
         """
         cctv_pop.to_pickle('./save/cctv_pop.pkl')
-        print(pd.read_pickle('./save/cctv_pop.pkl'))
+        print(pd.read_pickle('save/cctv_pop.pkl'))
 
     def save_police_norm(self): # 4
-        police_pos = pd.read_pickle('./save/police_pos.pkl')
+        police_pos = pd.read_pickle('save/police_pos.pkl')
         police = pd.pivot_table(police_pos,index="구별",aggfunc=np.sum)
         police['살인검거율'] = (police['살인 검거'].astype(int) / police['살인 발생'].astype(int)) * 100
         police['강도검거율'] = (police['강도 검거'].astype(int) / police['강도 발생'].astype(int)) * 100
@@ -225,7 +225,7 @@ class Crime:
         police_norm['검거'] = np.sum(police_norm[self.crime_columns], axis=1)
         # police_norm.reset_index(drop=False, inplace=True) # pickle 저장직전 인덱스 해제
         police_norm.to_pickle('./save/police_norm.pkl')
-        print(pd.read_pickle('./save/police_norm.pkl'))
+        print(pd.read_pickle('save/police_norm.pkl'))
 
     def save_us_unemployment_map(self): # 5
         mc = MyChoroplethVO()
@@ -241,7 +241,7 @@ class Crime:
         mc.bins = list(mc.data["Unemployment"].quantile([0, 0.25, 0.5, 0.75, 1]))
         mc.location = [48, -102]
         mc.zoom_start = 5
-        mc.save_path = "./save/unemployment.html"
+        mc.save_path = "save/unemployment.html"
         MyChoroplethService(mc)
 
     def save_seoul_crime_map(self): # 6
@@ -257,11 +257,11 @@ class Crime:
         mc.legend_name = "Crime Rate (%)"
         mc.location = [37.5502, 126.982]
         mc.zoom_start = 12
-        mc.save_path = "./save/seoul_crime_rate.html"
+        mc.save_path = "save/seoul_crime_rate.html"
         MyChoroplethService(mc)
 
     def get_seoul_crime_data(self):
-        police_norm = pd.read_pickle('./save/police_norm.pkl')
+        police_norm = pd.read_pickle('save/police_norm.pkl')
         return tuple(zip(police_norm.index, police_norm['범죄']))
         # police_norm.index 는 '구별'
 
@@ -272,7 +272,7 @@ def set_json_from_df(fname): # 미국 주가 콜롬비아, 푸에르토-리코(�
 
 if __name__ == '__main__':
     set_json_from_df("./data/us-states.json")
-    x = pd.read_json("./save/us-states.json")
+    x = pd.read_json("save/us-states.json")
     print(x.tail(1))
 
     # 콜롬비아('id': '11'-> 인덱스 8),

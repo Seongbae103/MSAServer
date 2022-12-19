@@ -1,7 +1,7 @@
 import cv2 as cv
 from PIL import Image
 
-from blog.path import CTX
+from blog import CTX
 
 
 def MosaicLambda(*params):
