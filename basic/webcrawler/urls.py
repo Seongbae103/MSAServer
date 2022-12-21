@@ -1,8 +1,7 @@
 from django.urls import re_path as url
-from basic.webcrawler import Views
-
+from basic.webcrawler.naver_movie import Views
 
 urlpatterns = [
-    url(r'navermovie', Views.navermovie)
+    url(r'naver-movie', Views.navermovie)
 
 ]

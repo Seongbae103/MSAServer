@@ -11,7 +11,8 @@ class ScrapVO:
     tag_name = ''
     fname = ''
     class_names = []
-    titles = []
+    title = []
+    movie = []
     diction = {}
     df = None
 
@@ -20,5 +21,5 @@ class ScrapVO:
         self.df = pd.DataFrame.from_dict(self.diction, orient='index')
 
     def dataframe_to_csv(self):
-        path = f'./save/navermovie.csv'
+        path = f'../save/navermovie.csv'
         self.df.to_csv(path, na_rep="NaN", header=None)
