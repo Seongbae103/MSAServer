@@ -29,7 +29,7 @@ class UserService(object):
 
     def create_users(self):
         string_pool = string.ascii_lowercase
-        blog_userid = random.randint(9999, 99999)
+        blog_userid = random.randint(9999, 99999) # model의 dtype이 숫자인 AutoField로 돼있어서 임시로 수정되면 "blog_userid= ''.join(random.sample(string_pool, 5))"로 변경(email도 email = blog_userid + "@naver.com"로 변경)
         email = str(blog_userid) + "@naver.com"
         nickname = ''.join(random.sample(string_pool, 5))
         password = 0
