@@ -69,13 +69,13 @@ class Crime:
         cols = ['절도 발생', '절도 검거', '폭력 발생', '폭력 검거']
         self.seoul_crime[cols] = self.seoul_crime[cols].replace(',', '', regex=True).astype(int)  #, regex=True
         self.cctv = pd.read_csv('data/dam_crime/cctv_in_seoul.csv')
-        self.pop = pd.read_excel('./data/dam_crime/pop_in_seoul.xls', names = ['자치구','합계','한국인','등록외국인','65세이상고령자'], usecols=[1,3,6,9,13], skiprows=[1,2])
+        self.pop = pd.read_excel('./fruits-360-5/dam_crime/pop_in_seoul.xls', names = ['자치구','합계','한국인','등록외국인','65세이상고령자'], usecols=[1,3,6,9,13], skiprows=[1,2])
         self.crime_rate_columns = ['살인검거율', '강도검거율', '강간검거율', '절도검거율', '폭력검거율']
         self.crime_columns = ['살인', '강도', '강간', '절도', '폭력']
         self.arrest_columns = ['살인 검거', '강도 검거', '강간 검거', '절도 검거', '폭력 검거']
         self.us_states = pd.read_json('data/dam_crime/us-states.json')
         self.us_unemployment = pd.read_csv('data/dam_crime/us_unemployment.csv')
-        self.ko_states = './data/kr-state.json'
+        self.ko_states = './fruits-360-5/kr-state.json'
 
 
     def spec(self):
@@ -203,7 +203,7 @@ class Crime:
         police_norm[self.crime_rate_columns] = police[self.crime_rate_columns]
         police_norm['범죄'] = np.sum(police_norm[self.crime_rate_columns], axis=1)
         police_norm['검거'] = np.sum(police_norm[self.crime_columns], axis=1)
-        # police_norm.reset_index(drop=False, inplace=True) # pickle 저장직전 인덱스 해제# data = tuple(zip(police_norm['구별'], police_norm['범죄']))일 때
+        # police_norm.reset_index(drop=False, inplace=True) # pickle 저장직전 인덱스 해제# fruits-360-5 = tuple(zip(police_norm['구별'], police_norm['범죄']))일 때
         police_norm.reset_index(drop=False, inplace=True) # pickle 저장직전 인덱스 해제
         police_norm.to_pickle('./save/police_norm.pkl')
         print(pd.read_pickle('./save/police_norm.pkl'))
@@ -212,8 +212,8 @@ class Crime:
         us_states = self.us_states
         us_unemployment = self.us_unemployment
 
-        geo_data = "./data/us-states.json"
-        state_unemployment = "./data/us_unemployment.csv"
+        geo_data = "./fruits-360-5/us-states.json"
+        state_unemployment = "./fruits-360-5/us_unemployment.csv"
         data = pd.read_csv(state_unemployment)
 
         bins = list(us_unemployment["Unemployment"].quantile([0, 0.25, 0.5, 0.75, 1]))

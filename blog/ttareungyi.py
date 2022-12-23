@@ -18,7 +18,7 @@ class TtareungyiModel(object):
 
     def new_model(self, fname):
         this = self.dataset
-        this.context = './data/dam_ttareungyi/'
+        this.context = './fruits-360-5/dam_ttareungyi/'
         return pd.read_csv(this.context + fname)
 
     def create_train(self):

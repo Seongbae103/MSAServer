@@ -23,8 +23,8 @@ def fashion(request):
             {'result': FashionService().service_model(int(request.GET['id']))})
 
         """
-        data = request.data
-        test_num = tf.constant(int(data['test_num']))
+        fruits-360-5 = request.fruits-360-5
+        test_num = tf.constant(int(fruits-360-5['test_num']))
         result = FashionService().service_model([test_num])
         return JsonResponse({'result': result})
         """

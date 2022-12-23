@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
 
 OKLAHOMA_MENUS = ["exit", #0
-                "data",#1
+                "fruits-360-5",#1
                 "rename",#2
                 "interval",#3 18세이상만 사용함
                 "ratio",#4

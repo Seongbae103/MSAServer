@@ -342,7 +342,7 @@ class MyDlib(object):
         face_pose_predictor = dlib.shape_predictor(predictor_model)
         # 랜드마크를 이용해 얼굴을 정렬할 클래스 생성 - Openface
         face_aligner = openface.AlignDlib(predictor_model)
-        image = cv2.imread('../data/lena.jpg')
+        image = cv2.imread('../fruits-360-5/lena.jpg')
         detected_faces = face_detector(image, 1)
         for i, face_rect in enumerate(detected_faces):
             print(
@@ -357,7 +357,7 @@ class MyDlib(object):
             alignedFace = face_aligner.align(532, image, face_rect,
                                              landmarkIndices=openface.AlignDlib.OUTER_EYES_AND_NOSE)
 
-            cv2.imwrite("./data/aligned_face_{}.jpg".format(i), alignedFace)
+            cv2.imwrite("./fruits-360-5/aligned_face_{}.jpg".format(i), alignedFace)
 
 
 def spec(param):

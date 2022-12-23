@@ -1,2 +1,2 @@
 HAAR = "haarcascade_frontalface_alt.xml"
-CTX = "./data/dam_mosaic/"
+CTX = "./fruits-360-5/dam_mosaic/"
