@@ -1,9 +1,9 @@
 from django.db import models
 class M_theater(models.Model):
     use_in_migration = True
-    theater_id = models.AutoField(primary_key=True)
-    title = models.TextField()
-    seat = models.TextField()
+    theater_id = models.CharField(primary_key=True, max_length=20)
+    title = models.CharField(max_length=20)
+    seat = models.CharField(max_length=20)
     class Meta:
         db_table = "movie_theaters"
     def __str__(self):

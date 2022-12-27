@@ -1,1 +1,1 @@
-basic/dlearn/fruits/fruits-360-5/
+dlearn/fruits/fruits-360-5/

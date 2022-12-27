@@ -3,6 +3,9 @@ import string
 import pandas as pd
 from sqlalchemy import create_engine
 
+from basic.algorithms.lambdas import lambda_number, lambda_string, lambda_k_name, random_number
+
+
 class UserService(object):
     def __init__(self):
         self.engine = create_engine(
@@ -25,21 +28,22 @@ class UserService(object):
                   if_exists='append',
                   con=self.engine,
                   index=False)
+
+    def create_user(self) -> []:
+        blog_userid = lambda_number(4)
+        email = str(blog_userid) + "@naver.com"
+        nickname = lambda_string(5)
+        password = 0
+        username = lambda_k_name(2)
+        birth = str(random_number(1, 13) + '.' + str(random_number(1, 30)))
+        return [blog_userid, email, nickname, password, username, birth]
+
     def create_dframe(self) -> {}:
         df = [self.create_user() for _ in range(100)]
-        df = pd.DataFrame(df, columns=['blog_userid', 'email', 'nickname', 'password'])
+        df = pd.DataFrame(df, columns=['blog_userid', 'email', 'nickname', 'password', 'username', 'birth'])
         df['blog_userid'] = df['blog_userid'].astype(str)
         print(f"df 확인 {df}")
         return df
-
-    def create_user(self) -> []:
-        string_pool = string.ascii_lowercase
-        blog_userid = random.randint(9999, 99999) # model의 dtype이 숫자인 AutoField로 돼있어서 임시로 수정되면 "blog_userid= ''.join(random.sample(string_pool, 5))"로 변경(email도 email = blog_userid + "@naver.com"로 변경)
-        email = str(blog_userid) + "@naver.com"
-        nickname = ''.join(random.sample(string_pool, 5))
-        password = 0
-        return [blog_userid, email, nickname, password]
-
     def change_to_df_users(self):
         pass
 
@@ -58,4 +62,4 @@ class UserService(object):
 
 
 if __name__ == '__main__':
-    UserService().userid_checker()
+    UserService().create_dframe()

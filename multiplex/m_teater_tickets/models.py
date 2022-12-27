@@ -1,7 +1,7 @@
 from django.db import models
 class M_theaterTicket(models.Model):
     use_in_migration = True
-    theater_ticket_id = models.AutoField(primary_key=True)
+    theater_ticket_id = models.CharField(primary_key=True, max_length=20)
     x = models.IntegerField()
     y = models.IntegerField()
     class Meta:

@@ -1,7 +1,7 @@
 from django.db import models
 class M_showtime(models.Model):
     use_in_migration = True
-    showtime_id = models.AutoField(primary_key=True)
+    showtime_id = models.CharField(primary_key=True, max_length=20)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     class Meta:

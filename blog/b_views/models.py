@@ -5,9 +5,9 @@ from blog.b_users.models import B_user
 
 class B_view(models.Model):
     use_in_migration = True
-    id = models.IntegerField(primary_key=True)
-    title = models.TextField()
-    created_at = models.DateTimeField()
+    id = models.CharField(primary_key=True, max_length=20)
+    title = models.CharField(max_length=20)
+    created_at = models.CharField(max_length=20)
 
     b_user = models.ForeignKey(B_user, on_delete=models.CASCADE)
     b_post = models.ForeignKey(B_post, on_delete=models.CASCADE)

@@ -1,20 +1,18 @@
 from django.db import models
+from security.users.models import User
 
-from blog.b_users.models import B_user
-
-
-class B_post(models.Model):
+class Post(models.Model):
     use_in_migration = True
     post_id = models.CharField(primary_key=True, max_length=20)
-    title = models.CharField(max_length=20)
-    content = models.CharField(max_length=20)
+    title = models.CharField(max_length=100)
+    content = models.CharField(max_length=1000)
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    b_user = models.ForeignKey(B_user, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
     class Meta:
-        db_table = "blog_posts"
+        db_table = "posts"
     def __str__(self):
         return f'{self.pk} {self.title} {self.content} {self.create_at}' \
                f' {self.updated_at}'
-# Create your models here.

@@ -6,11 +6,11 @@ from blog.b_users.models import B_user
 
 class B_comment(models.Model):
     use_in_migration = True
-    comment_id = models.AutoField(primary_key=True)
-    content = models.TextField()
+    comment_id = models.CharField(primary_key=True, max_length=20)
+    content = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    parent_id = models.TextField(null=True)
+    parent_id = models.CharField(null=True)
 
     b_user = models.ForeignKey(B_user, on_delete=models.CASCADE)
     b_post = models.ForeignKey(B_post, on_delete=models.CASCADE)

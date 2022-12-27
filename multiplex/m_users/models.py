@@ -1,11 +1,11 @@
 from django.db import models
 class M_user(models.Model):
     use_in_migration = True
-    movie_userid = models.AutoField(primary_key=True)
-    email = models.TextField()
-    nickname = models.TextField()
-    password = models.TextField()
-    age = models.TextField()
+    movie_userid = models.CharField(primary_key=True, max_length=20)
+    email = models.CharField(max_length=20)
+    nickname = models.CharField(max_length=20)
+    password = models.CharField(max_length=20)
+    age = models.CharField(max_length=20)
     class Meta:
         db_table = "movie_users"
     def __str__(self):

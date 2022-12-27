@@ -5,8 +5,8 @@ from blog.b_posts.models import B_post
 
 class B_tag(models.Model):
     use_in_migration = True
-    tag_id = models.AutoField(primary_key=True)
-    title = models.TextField()
+    tag_id = models.CharField(primary_key=True, max_length=20)
+    title = models.CharField(max_length=20)
 
     b_post = models.ForeignKey(B_post, on_delete=models.CASCADE)
 

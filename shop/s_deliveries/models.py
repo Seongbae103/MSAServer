@@ -1,11 +1,11 @@
 from django.db import models
 class S_delivery(models.Model):
     use_in_migration = True
-    delivery_id = models.AutoField(primary_key=True)
-    username = models.TextField()
-    address = models.TextField()
-    detail_address = models.TextField()
-    phone = models.TextField()
+    delivery_id = models.CharField(primary_key=True, max_length=20)
+    username = models.CharField(max_length=20)
+    address = models.CharField(max_length=20)
+    detail_address = models.CharField(max_length=20)
+    phone = models.CharField(max_length=20)
     class Meta:
         db_table = "shop_deliveries"
     def __str__(self):
