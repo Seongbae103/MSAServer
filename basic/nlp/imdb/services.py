@@ -1,5 +1,6 @@
 import csv
 import os
+import time
 
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -60,24 +61,28 @@ class NaverMovieService(object):
         driver = webdriver.Chrome(r"C:\Users\AIA\PycharmProjects\djangoRestProject\basic\webcrawler\chromedriver.exe")
         encoding = 'UTF-8'
     def crawling(self):
-        driver.get(url)
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        titles = soup.find_all('td', attrs={'class', 'title'})  #  # 크롤링 하려는 태그
-        # all_em = soup.find_all('span', attrs={'class', 'st_on'})
-        reviews = [div.br.next_element for div in titles]
-        for i, j in enumerate(reviews):
-            reviews[i] = j.replace('\n', '')
-            reviews[i] = reviews[i].replace('\t', '')
-        ratings = [td.em.string for td in titles]
-        result = {ratings[i]: reviews[i] for i in range(len(reviews))}
-        #df = pd.Series(reviews)
-        #df.to_csv(filename, header=None, index=None)
-        with open(filename, 'w', encoding=encoding, newline='') as f:
-            wr = csv.writer(f, delimiter=',')
-            wr.writerows(result.values())
-            wr.writerows(result.keys())
-
+        if not os.path.exists(filename):
+            review_data = []
+            for page in range(1, 2):
+                driver.get(url + str(page))
+                soup = BeautifulSoup(driver.page_source, 'html.parser')
+                all_tds = soup.find_all('td', attrs={'class', 'title'})
+                for review in all_tds:
+                    need_reviews_cnt = 1000
+                    sentence = review.find("a", {"class": "report"}).get("onclick").split("', '")[2]
+                    if sentence != "":  # 리뷰 내용이 비어있다면 데이터를 사용하지 않음
+                        score = review.find("em").get_text()
+                        review_data.append([sentence, int(score)])
+            time.sleep(1)  # 다음 페이지를 조회하기 전 1초 시간 차를 두기
+            with open(filename, 'w', newline='', encoding=encoding) as f:
+                wr = csv.writer(f)
+                wr.writerows(review_data)
             driver.close()
+
+        data = pd.read_csv(filename, header=None)
+        data.columns = ['review', 'score']
+        result = [print(f"{i + 1}. {data['score'][i]}\n{data['review'][i]}\n") for i in range(len(data))]
+        return result
 
 
 if __name__ == '__main__':
