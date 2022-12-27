@@ -21,9 +21,9 @@ class ImdbServices(object):
         print(train_input[0])
 
     def target_checker(self):
-        print(train_target[:20])
+        print(train_target2[:20])
         lengths = np.array([len(x) for x in train_input2])
-        print(np.mean(lengths), np.median(lengths))
+        print(f"평균값, 중간값 {np.mean(lengths)}, {np.median(lengths)}")
         plt.hist(lengths)
         plt.xlabel('lengths')
         plt.ylabel('frequency')
