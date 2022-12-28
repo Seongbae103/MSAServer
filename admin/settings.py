@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "blog", "multiplex", "shop", "rest_framework", "security.posts", "security.users",
-    "basic"
+    "basic", "basic.nlp.imdb"
 ]
 
 # CORS 관련 추가

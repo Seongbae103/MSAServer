@@ -23,4 +23,6 @@ urlpatterns = [
     #path('blog/stroke/', include('blog.stroke.urls')),
     path('dlearn/', include('basic.dlearn.urls')),
     path('webcrawler/', include('basic.webcrawler.urls')),
+    path('imdb/', include('basic.nlp.urls')),
+
 ]
