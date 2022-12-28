@@ -7,7 +7,7 @@ from basic.nlp.imdb.services import NaverMovieService
 @api_view(['POST'])
 @parser_classes([JSONParser])
 def navermovie(request):
-    result = NaverMovieService().process(request.data)
+    result = NaverMovieService().process(request.data['inputs'])
     print(f'긍정률: {result}')
 
     return JsonResponse({'긍정률': result})

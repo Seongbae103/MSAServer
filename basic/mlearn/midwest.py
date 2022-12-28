@@ -17,7 +17,7 @@ mw_menu = {
 
 class Midwest(object):
     def __init__(self):
-        self.md = pd.read_csv('data/dam_pd_samples/midwest.csv')
+        self.md = pd.read_csv('../../blog/data/dam_pd_samples/midwest.csv')
         self.md2 = None
 
     def menu_1(self):

@@ -24,5 +24,7 @@ urlpatterns = [
     path('dlearn/', include('basic.dlearn.urls')),
     path('webcrawler/', include('basic.webcrawler.urls')),
     path('imdb/', include('basic.nlp.urls')),
+    path('imdb/', include('basic.nlp.urls')),
+    path('security/', include('security.urls'))
 
 ]

@@ -59,7 +59,8 @@ class UserService(object):
         return df
 
     def get_users(self)->[]:
-        pass
+        return "포스트맨의 요청이 도착"
+
 
     def userid_checker(self):  # 아이디 중복체크
         pass

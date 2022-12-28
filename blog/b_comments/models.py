@@ -10,7 +10,7 @@ class B_comment(models.Model):
     content = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    parent_id = models.CharField(null=True)
+    parent_id = models.CharField(null=True, max_length=20)
 
     b_user = models.ForeignKey(B_user, on_delete=models.CASCADE)
     b_post = models.ForeignKey(B_post, on_delete=models.CASCADE)

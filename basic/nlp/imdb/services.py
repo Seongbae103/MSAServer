@@ -12,6 +12,8 @@ from selenium import webdriver
 from sklearn.model_selection import train_test_split
 import numpy as np
 import matplotlib.pyplot as plt
+
+from admin.path import dir_path
 from basic.nlp.imdb.models import ImdbModel
 
 
@@ -58,9 +60,10 @@ class NaverMovieService(object):
     def __init__(self):
         global url, filename, driverpath, encoding, review_train, k
         url = "http://movie.naver.com/movie/point/af/list.naver?&page=1"
-        filename = r"C:\Users\AIA\PycharmProjects\djangoRestProject\basic\nlp\imdb\naver_movie_review_corpus.csv"
-        driverpath = r"C:\Users\AIA\PycharmProjects\djangoRestProject\basic\webcrawler\chromedriver.exe"
-        review_train = r"C:\Users\AIA\PycharmProjects\djangoRestProject\basic\nlp\imdb\review_train.csv"
+        filename = os.path.join(dir_path("imdb"), "data", "naver_movie_review_corpus.csv")
+        #driverpath = os.path.join(os.getcwd(), "webcrawler", "chromedriver.exe") #os.getcwd()는 작동시키는 manage
+        driverpath = os.path.join(dir_path("webcrawler"), "chromedriver.exe")
+        review_train = os.path.join(dir_path("imdb"), "data", "review_train.csv")
         encoding = 'UTF-8'
         k = 0.5
         self.word_prob = []
@@ -100,6 +103,7 @@ class NaverMovieService(object):
         corpus = pd.read_table(review_train, sep=",", encoding=encoding)
         corpus = np.array(corpus)
         return corpus
+
     def count_words(self, train_X):
         counts = defaultdict(lambda : [0, 0])
         for doc, point in train_X:
@@ -110,6 +114,7 @@ class NaverMovieService(object):
             '''else:
                 print('리뷰의 평점이 실수(float)로 되어 있지 않다')'''
         return counts
+
     def isNumber(self, param):
         try:
             float(param)
@@ -118,8 +123,7 @@ class NaverMovieService(object):
             return False
 
     def probability(self, word_probs, doc):
-        print(f"doc.split() is {doc.split()}")
-        docwords = doc.split()
+        docwords = doc.split() # AttributeError: 'dict' object has no attribute 'split'
         log_prob_if_class0 = log_prob_if_class1 = 0.0
         for word, prob_if_class0, prob_if_class1 in word_probs:
             if word in docwords:
@@ -155,7 +159,7 @@ class NaverMovieService(object):
 
 if __name__ == '__main__':
     #service = NaverMovieService()
-    result = NaverMovieService().process("왜 안되는데")
+    result = NaverMovieService().process("왜 지금은 되는데 이유라도 알자")
     print(f"긍정:{result}")
 
 

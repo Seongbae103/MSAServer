@@ -34,8 +34,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "blog", "multiplex", "shop", "rest_framework", "security.posts", "security.users",
-    "basic", "basic.nlp.imdb"
+    "blog.b_comments", "blog.b_users", "blog.b_tags", "blog.b_views", "blog.b_posts",
+    "multiplex.m_users", "multiplex.m_teaters", "multiplex.m_teater_tickets", "multiplex.m_showtimes", "multiplex.m_cinemas",
+    "shop.s_carts", "shop.s_users", "shop.s_orders", "shop.s_products", "shop.s_categories", "shop.s_deliveries",
+    "rest_framework", "security.posts", "security.users",
+    "basic", "basic.nlp.imdb",
 ]
 
 # CORS 관련 추가
