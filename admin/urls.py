@@ -25,6 +25,5 @@ urlpatterns = [
     path('webcrawler/', include('basic.webcrawler.urls')),
     path('imdb/', include('basic.nlp.urls')),
     path('imdb/', include('basic.nlp.urls')),
-    path('security/', include('security.urls'))
-
+    path('security/', include('security.users.urls'))
 ]

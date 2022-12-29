@@ -8,5 +8,4 @@ from blog.b_users.service import UserService
 @api_view(['GET'])
 @parser_classes([JSONParser])
 def signup(request):
-
     return JsonResponse({'로그인 결과 ': UserService().getusers()})

@@ -1,9 +1,14 @@
+import os
+
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
 from keras.callbacks import ModelCheckpoint
 import tensorflow_datasets as tfds
+
+from admin.path import dir_path
+
 '''연습시에는 **kwargs 사용해서'''
 class FluitService:
     def __init__(self):
@@ -12,7 +17,7 @@ class FluitService:
             Apple_Golden_2_Test, Apple_Golden_2_Train, Apple_Golden_3_Test, Apple_Golden_3_Train, \
             img_height, img_width, batch_size
 
-        fruits = f"C:\\Users\\AIA\\PycharmProjects\\djangoRestProject\\basic\\dlearn\\fruits\\fruits-360-5"
+        fruits = os.path.join(dir_path("basic"), "dlearn", "fruits-360-5")
         trainpath = f"{fruits}\\Training"
         testpath = f"{fruits}\\Test"
         Apple_Braeburn_Test = f"{testpath}\\Apple Braeburn"

@@ -29,7 +29,15 @@ class User(models.Model):
     # role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, blank=True, null=True, default=3)
 
     def __str__(self):
-        return f'{self.pk}'
+        return f'ID: {self.pk}, \n' \
+               f'이메일: {self.user_email} \n' \
+               f'비번: {self.password} \n' \
+               f'전화번호: {self.phone} \n' \
+               f'생년월일: {self.birth} \n' \
+               f'주소: {self.address} \n' \
+               f'직업: {self.job} \n' \
+               f'관심사: {self.user_interests} \n' \
+               f'토큰: {self.token} \n' \
 
     class Meta:
         db_table = "users"
