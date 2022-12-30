@@ -11,6 +11,7 @@ class UserSerializer(serializers.ModelSerializer):
     job = serializers.CharField()
     user_interests = serializers.CharField()
     token = serializers.CharField()
+
     class Meta:
         model = user
         fields = '__all__'
@@ -20,3 +21,4 @@ class UserSerializer(serializers.ModelSerializer):
 
     def update(self, instance, valicated_data):
         user.objects.filter(pk=instance.id).update(**valicated_data)
+

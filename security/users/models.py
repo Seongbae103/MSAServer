@@ -15,7 +15,7 @@ class User(models.Model):
         (MANAGER, 'Manager'),
         (EMPLOYEE, 'Employee')
     )
-
+    # CQRS의 Entity
     use_in_migrations = True
     user_email = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
@@ -43,3 +43,4 @@ class User(models.Model):
         db_table = "users"
         verbose_name = 'user'
         verbose_name_plural = 'users'
+
