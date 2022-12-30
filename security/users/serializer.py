@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from rest_framework.response import Response
 from .models import User as user
 
 class UserSerializer(serializers.ModelSerializer):
@@ -22,3 +23,5 @@ class UserSerializer(serializers.ModelSerializer):
     def update(self, instance, valicated_data):
         user.objects.filter(pk=instance.id).update(**valicated_data)
 
+    def delete(self):
+        pass

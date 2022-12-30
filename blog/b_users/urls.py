@@ -3,6 +3,8 @@ from blog.b_users import views
 
 
 urlpatterns = [
-    url(r'signup', views.signup)
+    url(r'user', views.user),
+    url(r'user-list', views.user_list),
+
 
 ]
