@@ -54,3 +54,8 @@ urllib3==1.25.10
 Werkzeug==1
 wincertstore==0.2
 wordcloud
+yfinance == 0.2.3
+prophet == 1.1.1
+
+
+apache_beam

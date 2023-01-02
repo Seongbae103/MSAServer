@@ -60,10 +60,10 @@ class NaverMovieService(object):
     def __init__(self):
         global url, filename, driverpath, encoding, review_train, k
         url = "http://movie.naver.com/movie/point/af/list.naver?&page=1"
-        filename = os.path.join(dir_path("imdb"), "data", "naver_movie_review_corpus.csv")
+        filename = os.path.join(dir_path("imdb"), "../imdb/data", "naver_movie_review_corpus.csv")
         #driverpath = os.path.join(os.getcwd(), "webcrawler", "chromedriver.exe") #os.getcwd()는 작동시키는 manage
         driverpath = os.path.join(dir_path("webcrawler"), "chromedriver.exe")
-        review_train = os.path.join(dir_path("imdb"), "data", "review_train.csv")
+        review_train = os.path.join(dir_path("imdb"), "../imdb/data", "review_train.csv")
         encoding = 'UTF-8'
         k = 0.5
         self.word_prob = []
