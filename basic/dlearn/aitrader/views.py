@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from rest_framework.decorators import api_view, parser_classes
 from rest_framework.parsers import JSONParser
 
-from basic.dlearn.aitrader.samsung_trader import SamsungTrader
+from basic.dlearn.aitrader.samsung_trader_dnn_model import SamsungTrader
 
 
 
