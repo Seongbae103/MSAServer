@@ -234,17 +234,6 @@ class LstmModel(AiTraderModel):
         print(f"저장경로: {file_name}")
         model.save(file_name)
 
-        '''
-        Epoch 44/100
-
-        loss :  1609906.8891261544
-        mse :  1609906.625
-        종가 :  [52200] / 예측가 :  [51450.69]
-        종가 :  [41450] / 예측가 :  [40155.082]
-        종가 :  [49650] / 예측가 :  [50907.082]
-        종가 :  [44800] / 예측가 :  [45825.527]
-        종가 :  [49500] / 예측가 :  [48564.38]
-        '''
 
     def lstm_scaled(self, param):
         x, y = super().split_xy5(dataset=param, time_steps=5, y_column=1)
