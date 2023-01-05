@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76dc5541-029b-4959-abde-42b067dc0259" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/FastApiProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/api/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/api/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/mysql/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/mysql/conf.d/my.cnf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/mysql/initdb.d/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/mysql/initdb.d/testdata.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/djangoRestProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPype1-1.2.1-cp39-cp39-win_amd64.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/check.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/korean.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../admin/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/algorithms/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/algorithms/lambdas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/data/kospi200.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/data/samsung.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/data/삼성전자.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/data/코스피200.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/samsung_trader_dnn_ensemble.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/samsung_trader_dnn_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/samsung_trader_lstm_ensemble.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/samsung_trader_lstm_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/aitrader/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fashion/Fashion_Service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fashion/Fashion_View.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fashion/Fashion_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fashion/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fruits/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fruits/fruits-360-5/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fruits/fruitsviews.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/fruits/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/Iris_Model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/Iris_Service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/save/iris_model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/iris/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/number/Number_Model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/number/Number_Service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/number/Number_view.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/number/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/perceptron.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/save/fashion_model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/save/iris_model.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/dlearn/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/bicycle/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/bicycle/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/crime/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/crime/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/crime/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/midwest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/mpg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/mlearn/oklahoma.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/data/naver_movie_review_corpus.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/data/review_train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/imdb/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/korean_classify/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/korean_classify/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/korean_classify/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/korean_classify/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/samsung_report/D2Coding.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/samsung_report/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/samsung_report/kr-Report_2018.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/samsung_report/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/samsung_report/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/samsung_report/stopwords.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/nlp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/pythonic/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/pythonic/calculator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/pythonic/odd_even.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/pythonic/search_number.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/pythonic/tf_calculator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/naver_movie/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/naver_movie/model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/naver_movie/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/naver_movie/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/save/navermovie.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basic/webcrawler/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/READ_ME.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_comments/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_posts/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_tags/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/sample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/cctv_pop.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/crimerate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/police_norm.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/police_pos.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/police_pos.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/seoul_crime_rate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/stroke.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/unemployment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/unemployment2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/unemployment3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/save/us-states.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/t_crime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/b_views/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/cctv_in_seoul.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/cctv_pop.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/comb32.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/crime_in_seoul.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/healthcare-dataset-stroke-data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/kr-state.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/police_pos.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/police_pos.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/pop_in_seoul.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/us-states.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_crime/us_unemployment.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/cat-mosaic.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/cat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/girl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/girl_inclined.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/girl_side_face.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/girl_with_mom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/haarcascade_frontalface_alt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_mosaic/lenna.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_pd_samples/midwest.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_pd_samples/mpg.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_pd_samples/mpg_test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_titanic/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_titanic/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/dam_ttareungyi/train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/data/healthcare-dataset-stroke-data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/dataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/fp_closure.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/fruits.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/image/hw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/mosaic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/path.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/random_forest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/save/dam_musicsave/ranking.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/save/dam_pd_save/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/save/stroke.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog/tensor_check.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gitignore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/fashion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/crawler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/Lenna.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000018.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000020.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000043.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000044.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000045.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000047.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000050.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000053.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000060.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000065.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000069.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000070.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000071.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000072.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000073.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000074.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000075.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000076.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000077.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000078.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000079.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000081.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000083.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000085.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000086.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000087.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000088.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000089.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000102.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000119.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000134.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000135.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000136.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000138.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000140.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000141.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000145.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000146.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000147.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000149.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000151.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000152.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000153.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000156.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000158.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000159.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000161.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000162.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000164.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000165.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000169.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000171.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000172.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000173.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000174.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000175.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000176.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000177.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000178.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000179.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000180.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000181.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000182.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000183.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000184.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000185.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000186.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000187.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000189.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000190.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000191.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000192.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000193.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000194.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000195.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000196.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000197.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000198.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000199.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/data/celeva/000200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/googlemap_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/lambdas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_cinemas/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_showtimes/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teater_tickets/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_teaters/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/m_users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/member.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/newdata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/randomlist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../multiplex/thresh.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/posts/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/seivice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security/users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/bubble.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/data/Iris.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_carts/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_categories/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_deliveries/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_orders/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/fashion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/services.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_products/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/repositories.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/serializer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shop/s_users/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tesk.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JtC4v0MWqBFV8LPvWfdKOArzdr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AIA/PycharmProjects/MSAProject/fastApiProject/docker/mysql/initdb.d/testdata.sql&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;SQL Dialects&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AIA\PycharmProjects\MSAProject\fastApiProject\docker\api" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76dc5541-029b-4959-abde-42b067dc0259" name="Changes" comment="" />
+      <created>1672887804641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672887804641</updated>
+      <workItem from="1672887805803" duration="23013000" />
+      <workItem from="1672917256196" duration="81000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
