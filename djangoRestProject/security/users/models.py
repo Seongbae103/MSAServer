@@ -13,7 +13,7 @@ class User(models.Model):
         (MANAGER, 'Manager'),
         (EMPLOYEE, 'Employee')
     )
-    # CQRS의 Entity
+    # CQRS의 Entity #Django ORM(fastapi는 다르다)
     use_in_migrations = True
     user_email = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
