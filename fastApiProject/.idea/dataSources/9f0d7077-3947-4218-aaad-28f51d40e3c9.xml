@@ -832,56 +832,5 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="233" parent="1" name="root">
       <Host>root</Host>
     </user>
-    <table id="234" parent="225" name="users">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8_general_ci</CollationName>
-    </table>
-    <column id="235" parent="234" name="user_email">
-      <DataType>varchar(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="236" parent="234" name="password">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>2</Position>
-    </column>
-    <column id="237" parent="234" name="user_name">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <column id="238" parent="234" name="phone">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>4</Position>
-    </column>
-    <column id="239" parent="234" name="birth">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>5</Position>
-    </column>
-    <column id="240" parent="234" name="address">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>6</Position>
-    </column>
-    <column id="241" parent="234" name="job">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>7</Position>
-    </column>
-    <column id="242" parent="234" name="user_interests">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>8</Position>
-    </column>
-    <column id="243" parent="234" name="token">
-      <DataType>varchar(20)|0s</DataType>
-      <Position>9</Position>
-    </column>
-    <index id="244" parent="234" name="PRIMARY">
-      <ColNames>user_email</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="245" parent="234" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
   </database-model>
 </dataSource>

@@ -2,8 +2,8 @@ from typing import List
 from pydantic import BaseModel
 
 
-class Post(BaseModel):
-    post_id = int
+class Article(BaseModel):
+    art_seq = int
     title = str
     content = str
     create_at = str
@@ -11,6 +11,3 @@ class Post(BaseModel):
 
     class Config:
         orm_mode = True
-
-class PostList(Post):
-    posts: List[Post] = []
