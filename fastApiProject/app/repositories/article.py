@@ -24,7 +24,7 @@ def update(id, item, db):
 def delete(id, item, db):
     return None
 
-def find_article(page, db):
+def find_articles(page, db):
     return None
 
 def find_article_by_id(id, db):

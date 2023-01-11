@@ -16,6 +16,7 @@ baseurl = os.path.dirname(os.path.abspath(__file__))
 router = APIRouter()
 router.include_router(user_router, prefix="/users", tags=["users"])     #경로지정 : APIRouter().include-router(import한 router, prefix="경로", tags=["table명"])
 router.include_router(article_router, prefix="/articles", tags=["articles"])
+
 app = FastAPI()
 app.include_router(router)
 app.add_middleware(DBSessionMiddleware, db_url=DB_URL)

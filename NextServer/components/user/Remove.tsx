@@ -1,4 +1,5 @@
-export default function Login(){
+export default function RemoveUser() {
+    
     const validateFormWithJS = () => {
         //const name = document.querySelector('#name').value
         //const rollNumber = document.querySelector('#rollNumber').value
@@ -15,15 +16,12 @@ export default function Login(){
         }
       }
     
-
     return (<>
-            <h1>로그인</h1>
-            <form action="/send-data-here" method="post" onSubmit={validateFormWithJS}>
-                <label htmlFor="user_email">User Email:</label>
-                <input type="text" id="user_email" name="user_email" />
-
+            <h1>탈퇴</h1>
+            <form action="/send-data-here" method="post">
+                
                 <label htmlFor="password">Password:</label>
-                <input type="text" id="password" name="password" />
+                <input type="text" id="password" name="password" required minLength={4} maxLength={20}/>
 
                 <button type="submit">Submit</button>
             </form>

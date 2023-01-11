@@ -7,4 +7,4 @@ PASSWORD = 'root'
 DATABASE = 'mydb'
 CHARSET = 'utf8'
 DB_URL = f"mysql+pymysql://{USERNAME}:{PASSWORD}@{HOSTNAME}:{PORT}/{DATABASE}"
-engine = create_engine(DB_URL, echo=True)  # host로 안되면 localhost
+engine = create_engine(DB_URL, echo=True)  #host로 안되면 localhost

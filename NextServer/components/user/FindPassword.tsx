@@ -1,4 +1,5 @@
-export default function Login(){
+export default function FindPassword() {
+
     const validateFormWithJS = () => {
         //const name = document.querySelector('#name').value
         //const rollNumber = document.querySelector('#rollNumber').value
@@ -15,18 +16,15 @@ export default function Login(){
         }
       }
     
-
     return (<>
-            <h1>로그인</h1>
-            <form action="/send-data-here" method="post" onSubmit={validateFormWithJS}>
+            <h1>비밀번호 찾기</h1>
+            <form action="/send-data-here">
                 <label htmlFor="user_email">User Email:</label>
-                <input type="text" id="user_email" name="user_email" />
-
-                <label htmlFor="password">Password:</label>
-                <input type="text" id="password" name="password" />
+                <input type="text" id="user_email" name="user_email"/>
 
                 <button type="submit">Submit</button>
             </form>
         </>
     )
 }
+

@@ -1,7 +1,10 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import { configureStore, AnyAction, CombinedState, combineReducers} from '@reduxjs/toolkit'
 import reducer from '@/modules/counter/counterSlice'
 import { createWrapper } from 'next-redux-wrapper'
 import logger from 'redux-logger'
+import {HYDRATE} from "next-redux-wrapper"
+
+import createSagaMiddleware from "@redux-saga/core"
 
 const isDev = process.env.NODE_ENV === 'development'
 
