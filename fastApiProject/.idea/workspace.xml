@@ -2,64 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76dc5541-029b-4959-abde-42b067dc0259" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/admin/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/admin/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Navigation.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/counter/Counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/counter/Counter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/ListForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/user/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/LoginForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/components/user/Logout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/SignUp.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/UserDetail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/UserEdit.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/UserList.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/UserRemove.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/admin/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/Home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Add.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Detail.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/List.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Remove.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Update.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/counter/Counter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Detail.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/FindEmail.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/FindPassword.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/GoogleLogin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Join.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/List.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Login.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Logout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Remove.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Update.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterAPI.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterSlice.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/modules/store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/modules/users/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/pages/_app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/pages/api/hello.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/pages/counter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/pages/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/join.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/list.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/login.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReactServer/src" beforeDir="false" afterPath="$PROJECT_DIR$/../ReactServer/src" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3780767f-45b5-4ae8-a829-d75481918f89.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3780767f-45b5-4ae8-a829-d75481918f89/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3780767f-45b5-4ae8-a829-d75481918f89/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3780767f-45b5-4ae8-a829-d75481918f89/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3780767f-45b5-4ae8-a829-d75481918f89/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/609acd4a-c5f8-43d8-99a8-592506f3279d.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/609acd4a-c5f8-43d8-99a8-592506f3279d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/609acd4a-c5f8-43d8-99a8-592506f3279d/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/609acd4a-c5f8-43d8-99a8-592506f3279d/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/609acd4a-c5f8-43d8-99a8-592506f3279d/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9f0d7077-3947-4218-aaad-28f51d40e3c9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9f0d7077-3947-4218-aaad-28f51d40e3c9/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9f0d7077-3947-4218-aaad-28f51d40e3c9/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9f0d7077-3947-4218-aaad-28f51d40e3c9/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9f0d7077-3947-4218-aaad-28f51d40e3c9/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ba9c9fdc-9614-4c7a-a3c5-a20599c8840c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ba9c9fdc-9614-4c7a-a3c5-a20599c8840c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ba9c9fdc-9614-4c7a-a3c5-a20599c8840c/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ba9c9fdc-9614-4c7a-a3c5-a20599c8840c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ba9c9fdc-9614-4c7a-a3c5-a20599c8840c/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dbb4d2a7-4692-4289-a1f9-edbf9d12c7a7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dbb4d2a7-4692-4289-a1f9-edbf9d12c7a7/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dbb4d2a7-4692-4289-a1f9-edbf9d12c7a7/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dbb4d2a7-4692-4289-a1f9-edbf9d12c7a7/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dbb4d2a7-4692-4289-a1f9-edbf9d12c7a7/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eda1bf3c-9cf1-4c70-8fce-917e0d306b18.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eda1bf3c-9cf1-4c70-8fce-917e0d306b18/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eda1bf3c-9cf1-4c70-8fce-917e0d306b18/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eda1bf3c-9cf1-4c70-8fce-917e0d306b18/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eda1bf3c-9cf1-4c70-8fce-917e0d306b18/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/endpoints/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/url.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/enums/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mixins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/article.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/repositories/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/article.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/api/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +190,9 @@
       <workItem from="1673311008924" duration="25617000" />
       <workItem from="1673349205407" duration="63000" />
       <workItem from="1673351135855" duration="28000" />
-      <workItem from="1673397244595" duration="13313000" />
+      <workItem from="1673397244595" duration="14032000" />
+      <workItem from="1673494540159" duration="6759000" />
+      <workItem from="1673569894902" duration="18944000" />
     </task>
     <servers />
   </component>

@@ -910,6 +910,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </column>
     <column id="249" parent="235" name="user_email">
       <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="250" parent="235" name="password">
