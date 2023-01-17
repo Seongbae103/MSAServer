@@ -6,3 +6,7 @@ pymysql
 Fastapi_SQLAlchemy == 0.2.1
 sqlalchemy_utils
 pytz
+pyjwt
+jwt
+shortuuid
+passlib

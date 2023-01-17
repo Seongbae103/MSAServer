@@ -3,6 +3,7 @@ import { User } from "@/modules/types"
 import { useRef } from "react"
 import { useDispatch } from "react-redux"
 import { joinRequest } from "@/modules/slices"
+import styled from 'styled-components';
 
 export default function Join() { 
     const dispatch = useDispatch()
@@ -14,11 +15,19 @@ export default function Join() {
     const passwordRef = useRef<string | null | undefined>(null)
     passwordRef.current = watch("password")
     return (<>
-        <h2>회원가입</h2>
+        
         <form onSubmit={handleSubmit(onSubmit)}>
-
-          <label htmlFor="user_email">이메일(ID):</label>
-          <input 
+          <Sheet >
+            <thead>
+              <Row>
+                <Cell colSpan={2}><h6>회원가입</h6></Cell>
+              </Row>
+            </thead>
+            <tbody>
+              <Row>
+                <Cell>
+                <label htmlFor="user_email">이메일(ID)</label></Cell>
+                <Cell><Input 
             {...register("user_email", { 
               required: true,
               maxLength: 30,
@@ -31,9 +40,10 @@ export default function Join() {
             placeholder="name@example.com"
             required minLength= {10} maxLength={20}/> <br/>
             
-            {errors.user_email && <p>{errors.user_email.message}</p>}
-          <label htmlFor="password">비밀번호:</label>
-          <input 
+            {errors.user_email && <p>{errors.user_email.message}</p>} </Cell></Row>
+            <Row><Cell>
+          <label htmlFor="password">비밀번호</label></Cell>
+          <Cell><Input 
             {...register("password", { 
               required: true, 
               minLength: {
@@ -47,9 +57,10 @@ export default function Join() {
             })}
             type="password" 
             placeholder="비밀번호(영문, 숫자 8자리 이상)"
-            id="password" name="password" required /> <br/>
+            id="password" name="password" required /> 
           {errors.password && <p>{errors.password.message}</p>}
-          <input
+          
+          <Input
                         {...register("cpassword", { 
                             required: true,
                             validate: (value) => value === passwordRef.current,
@@ -58,10 +69,15 @@ export default function Join() {
                         placeholder="비밀번호 재확인"
                         id="cpassword"
                         name="cpassword"
-                        className="block w-full px-4 py-3 text-sm border rounded-lg outline-none"/>
+                        />
                     {errors.cpassword && <p>비밀번호가 일치하지 않습니다</p>}
-          <label htmlFor="user_name">이름(실명):</label>
-          <input
+                </Cell>
+              </Row>
+             
+              <Row>
+                <Cell>
+                <label htmlFor="user_name">이름(실명)</label></Cell><Cell>
+          <Input
           {...register("user_name", { 
             required: true, 
             maxLength: {
@@ -73,12 +89,20 @@ export default function Join() {
           type="text" id="user_name" name="user_name" 
           placeholder="사용자 이름"
           required /> 
-        {errors.user_name && <p>{errors.user_name.message}</p>}<br/>
-          <label htmlFor="phone">전화번호:</label>
-          <input type="text" id="phone" name="phone" required /> <br/>
+        {errors.user_name && <p>{errors.user_name.message}</p>}
+                </Cell>
+              </Row>
+              <Row>
+                <Cell>
+                <label htmlFor="phone">전화번호</label></Cell>
+                <Cell><Input type="text" id="phone" name="phone" /> 
 
-          <label htmlFor="birth">생년월일(20001201):</label> 
-          <input 
+                </Cell>
+              </Row>
+              <Row>
+                <Cell>
+                <label htmlFor="birth">생년월일</label> </Cell>
+                <Cell><Input 
           {...register("birth", { 
             required: true, 
             maxLength: {
@@ -99,21 +123,55 @@ export default function Join() {
           placeholder="생년월일 8자리(ex: 19991212)"
           /> 
           {errors.birth && <p>{errors.birth.message}</p>}
-          <br/>
+                </Cell>
+              </Row>
+              <Row>
+                <Cell><label htmlFor="address">주소</label></Cell>
+                <Cell><Input type="text" id="address" name="address" /> </Cell>
+              </Row>
+              <Row>
+                <Cell>
+                <label htmlFor="job">직업</label></Cell>
+                <Cell><Input type="text" id="job" name="job" /> 
+                </Cell>
+              </Row>
+              <Row>
+                <Cell>
+                <label htmlFor="user_interests">관심사항</label></Cell>
+                <Cell><Input type="text" id="user_interests" name="user_interests" /> 
+                </Cell>
+              </Row>
+              <Row>
+                <Cell>
+                <Input type="checkbox" className="custom-control-input" id="aggrement" required /></Cell>
+                <Cell><label className="custom-control-label" htmlFor="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+                </Cell>
+              </Row>
+              <Row>
+                <Cell colSpan={2}><button type="submit" >전송</button></Cell>
+              </Row>
+              
+            </tbody>
+          </Sheet>
 
-          <label htmlFor="address">주소:</label>
-          <input type="text" id="address" name="address" /> <br/>
-
-          <label htmlFor="job">직업:</label>
-          <input type="text" id="job" name="job" /> <br/>
-
-          <label htmlFor="user_interests">관심사항 :</label>
-          <input type="text" id="user_interests" name="user_interests" /> <br/>
-          <input type="checkbox" className="custom-control-input" id="aggrement" required />
-                    <label className="custom-control-label" htmlFor="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
-
-          <button type="submit">Submit</button>
+          
           </form> 
         </>)
 
     }
+
+const Sheet = styled.table`
+border: 1px solid black
+width: 70%
+
+`
+const Row = styled.tr`
+border: 1px solid black
+`
+const Cell = styled.td`
+border: 1px solid black,
+
+`
+const Input = styled.input`
+width: 100%
+`

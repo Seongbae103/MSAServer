@@ -10,6 +10,38 @@ export interface User{
     job? : string,
     user_interests? : string,
     token? : string
-    create_at? : string,
-    updated_at? : string
+    created? : string,
+    modified? : string
+}
+
+export interface UserLoginInput{
+    user_email: string,
+    password: string
+}
+
+export interface LoginUser{ 
+    user_name?:string, password:string, user_email:string, user_id?:string,
+    phone?:string, birth?:string, 
+    token?: any
+}
+
+export interface UserInfo{
+    user_name:string, password:string, user_email:string,
+    phone:string, birth:string,
+    token: any
+}
+
+export interface UserInfoState{
+    data: UserInfo[]
+    isloggined: boolean
+}
+
+export interface UserState{
+    data: User[]
+    status: 'idle' | 'loading' | 'failed'
+    token?: null,
+    isLoggined: boolean,
+    error : null;
+    loginedUser: null,
+    check: boolean
 }

@@ -1,41 +1,67 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-import app.repositories.article as dao
+from starlette.responses import JSONResponse
+
+import app.cruds.article as dao
+from app.admin.utils import current_time
 from app.database import get_db
+
+from app.schemas.article import ArticleDTO
+
 
 router = APIRouter()
 
-@router.get("/")
-async def get_all_articles(db : Session = Depends(get_db)):
-    return {"data": dao.find_all_articles(db = db)}
-    #return {"data": find_users_legacy()}
+@router.post("/write", status_code=201)
+async def write(dto: ArticleDTO, db: Session = Depends(get_db)):
+    article_crud = dao.ArticleCrud(db)
+    article = article_crud.find_article_by_userid(request_article=dto)
+    if article is not None:
+        result = article_crud.add_article(request_article=dto)
+    else:
+        result = JSONResponse(status_code=400, content=dict(msg="작성 불가"))
+    return {"data": result}
 
-@router.post("/{id}")
-async def article(id:str, item: str, db: Session = Depends(get_db)):
-    dao.article(id, item, db)
-    return {"data": "success"}
+@router.get("/read", status_code=201)
+async def read(dto: ArticleDTO, db: Session = Depends(get_db)):
+    article_crud = dao.ArticleCrud(db)
+    article = article_crud.find_article_by_userid(request_article=dto)
+    if article is not None:
+        result = article_crud.read_article(request_article=dto)
+    else:
+        result = JSONResponse(status_code=400, content=dict(msg="열람 불가"))
+    return result
 
-@router.put("/{id}")
-async def update(id:str, item: str, db: Session = Depends(get_db)):
-    dao.update(id,item,db)
-    return {"data": "success"}
+@router.get("/read-all", status_code=201)
+async def read_all(dto: ArticleDTO, db: Session = Depends(get_db)):
+    article_crud = dao.ArticleCrud(db)
 
-@router.delete("/{id}")
-async def delete(id:str, item: str, db: Session = Depends(get_db)):
-    dao.delete(id,item,db)
-    return {"data": "success"}
+    if article_crud is not None:
+        result = article_crud.read_all_articles(request_article=dto)
+    else:
+        result = JSONResponse(status_code=400, content=dict(msg="열람 불가"))
+    return result
 
-@router.get("/{page}")
-async def get_articles(page: int, db: Session = Depends(get_db)):
-    ls = dao.find_articles(page, db)
-    return {"data": ls}
+@router.put("/update", status_code=201)
+async def update(dto: ArticleDTO, db: Session = Depends(get_db)):
+    print(f"######### 수정을 시작한 시간: {current_time()} ")
+    print(f"######### 수정글 정보 : {dto}")
+    article_crud = dao.ArticleCrud(db)
+    article = article_crud.find_article_by_userid(request_article=dto)
+    if article is not None:
+        print(f"내용 : {dto.content}")
+        result = article_crud.update_article(request_article=dto)
+    else:
+        result = JSONResponse(status_code=400, content=dict(msg="작성 불가"))
+    return {"data": result}
 
-@router.get("/id/{id}")
-async def get_article_by_id(id: str, db: Session = Depends(get_db)):
-    dao.find_article_by_id(id, db)
-    return {"data": "success"}
-
-@router.get("/serch/{search}/{no}")
-async def get_article_by_text(search:str, page: int, db: Session = Depends(get_db)):
-    dao.find_articles_by_job(search, page, db)
-    return {"data": "success"}
+@router.delete("/delete", status_code=201)
+async def delete(dto: ArticleDTO, db: Session = Depends(get_db)):
+    article_crud = dao.ArticleCrud(db)
+    print(f"###delete article crud: {article_crud}")
+    article = article_crud.find_article_by_title(request_article=dto)
+    print(f"###delete article: {article}")
+    if article is not None:
+        result = article_crud.delete_article(request_article=dto)
+    else:
+        result = JSONResponse(status_code=400, content=dict(msg="작성 불가"))
+    return {"data": result}

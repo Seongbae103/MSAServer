@@ -11,6 +11,7 @@ export default function Navbar(){
         <li className="nav-item"><Link href="/user/join">회원가입</Link></li><span style={{width:10}}/>
         <li className="nav-item"><Link href="/user/login">로그인</Link></li><span style={{width:10}}/>
         <li className="nav-item"><Link href="/user/list" >사용자목록</Link></li><span style={{width:10}}/>
+        <li className="nav-item"><Link href="/article/write" >글쓰기</Link></li><span style={{width:10}}/>
       </ul>
       </nav>
     </div>

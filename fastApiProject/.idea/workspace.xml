@@ -2,49 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76dc5541-029b-4959-abde-42b067dc0259" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/admin/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/Home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Footer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/admin/Navbar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Add.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Detail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/List.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Remove.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/article/Update.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/counter/Counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Detail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/FindEmail.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/FindPassword.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/GoogleLogin.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Join.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/List.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Logout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Remove.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/components/user/Update.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterAPI.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterSlice.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/counter/counterSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/store.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/modules/users/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/_app.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/api/hello.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/join.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/list.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/pages/user/login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bases/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bases/article.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bases/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cruds/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/cruds/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/test/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/admin/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/admin/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/article/Add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/article/Add.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/Join.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/Join.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/LoginHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/LoginHome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/apis/articleAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/apis/articleAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/apis/userAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/apis/userAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/controllers/articleController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/controllers/articleController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/sagas/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/sagas/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/sagas/userSaga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/sagas/userSaga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/slices/articleSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/slices/articleSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/slices/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/slices/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/slices/userSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/slices/userSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/types/Article.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/types/Article.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/modules/types/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/modules/types/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/pages/loginHome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/pages/loginHome/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NextServer/src/pages/user/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/pages/user/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ReactServer/src" beforeDir="false" afterPath="$PROJECT_DIR$/../ReactServer/src" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/endpoints/url.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/endpoints/url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/enums/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/repositories/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/repositories/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/security.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/cruds/article.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/repositories/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routers/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/article.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/article.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/api/requirements.txt" afterDir="false" />
     </list>
@@ -106,7 +101,29 @@
       <recent name="C:\Users\AIA\PycharmProjects\MSAProject\fastApiProject\docker\api" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.user">
+  <component name="RunManager" selected="Python.utils">
+    <configuration name="jwttest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FastApiProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/admin" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/admin/jwttest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FastApiProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -151,6 +168,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FastApiProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/admin" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/admin/utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for main.test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="FastApiProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,6 +207,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.jwttest" />
         <item itemvalue="Python.user" />
         <item itemvalue="Python tests.Python tests for main.test" />
         <item itemvalue="Python.main" />
@@ -192,7 +233,13 @@
       <workItem from="1673351135855" duration="28000" />
       <workItem from="1673397244595" duration="14032000" />
       <workItem from="1673494540159" duration="6759000" />
-      <workItem from="1673569894902" duration="18944000" />
+      <workItem from="1673569894902" duration="19582000" />
+      <workItem from="1673829406857" duration="7345000" />
+      <workItem from="1673836771363" duration="17685000" />
+      <workItem from="1673859562375" duration="747000" />
+      <workItem from="1673914955975" duration="12728000" />
+      <workItem from="1673927740429" duration="20522000" />
+      <workItem from="1673952356099" duration="4275000" />
     </task>
     <servers />
   </component>
@@ -212,7 +259,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FastApiProject$.coverage" NAME=" Coverage Results" MODIFIED="1673237328805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FastApiProject$jwttest.coverage" NAME="jwttest Coverage Results" MODIFIED="1673830575988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/admin" />
     <SUITE FILE_PATH="coverage/FastApiProject$user.coverage" NAME="user Coverage Results" MODIFIED="1673400994253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/repositories" />
     <SUITE FILE_PATH="coverage/FastApiProject$main.coverage" NAME="main Coverage Results" MODIFIED="1673237180367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/FastApiProject$utils.coverage" NAME="utils Coverage Results" MODIFIED="1673834082658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/admin" />
   </component>
 </project>

@@ -840,13 +840,13 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <column id="236" parent="234" name="create_at">
+    <column id="236" parent="234" name="created">
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="237" parent="234" name="updated_at">
+    <column id="237" parent="234" name="modified">
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
@@ -890,13 +890,13 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="246" parent="235" name="create_at">
+    <column id="246" parent="235" name="created">
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="247" parent="235" name="updated_at">
+    <column id="247" parent="235" name="modified">
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
@@ -904,17 +904,17 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>2</Position>
     </column>
     <column id="248" parent="235" name="user_id">
-      <DataType>char(32)|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="249" parent="235" name="user_email">
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="250" parent="235" name="password">
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
@@ -940,11 +940,11 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>10</Position>
     </column>
     <column id="256" parent="235" name="user_interests">
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <Position>11</Position>
     </column>
     <column id="257" parent="235" name="token">
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <Position>12</Position>
     </column>
     <index id="258" parent="235" name="PRIMARY">
@@ -952,10 +952,18 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="259" parent="235" name="PRIMARY">
+    <index id="259" parent="235" name="user_email">
+      <ColNames>user_email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="260" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="261" parent="235" name="user_email">
+      <UnderlyingIndexName>user_email</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
