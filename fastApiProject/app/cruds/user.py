@@ -1,5 +1,6 @@
 from abc import ABC
 from typing import List
+from fastapi import HTTPException
 from app.admin.security import verify_password
 from app.bases.user import UserBase
 from app.models.user import User
@@ -14,34 +15,35 @@ class UserCrud(UserBase, ABC):
         self.db: Session = db
 
     def add_user(self, request_user: UserDTO) -> str:
-        print(f"### 1 ### {request_user}")
         user = User(**request_user.dict())
-        print(f"### 2 ### {user}")
         self.db.add(user)
         self.db.commit()
-        print("### 3 ###")
         return "success" #modules.apis.userAPI의 if(response.data === "success"){에 들어가는 내용
 
-    def login(self, request_user: UserDTO) -> UserDTO:
-        target = self.find_user_by_id(request_user)
+    def login_user(self, request_user: UserDTO) -> UserDTO:
+        userid = self.find_userid_by_email(request_user)
         verified = verify_password(plain_password = request_user.password,
                                    hashed_password = target.password)
-        print(f"검증결과 {verified}")
         if verified:
             return target
         else:
             return None
 
-
     def update_user(self, request_user: UserDTO) -> str:
-        pass
+        update_data = request_user.dict(exclude_unset=True)
+
+        lastrowid = self.db.update(update_data)
+        print(f" 수정완료 후 해당 ID : {lastrowid}")
+        self.db.commit()
+        return lastrowid
 
     def delete_user(self, request_user: UserDTO):
-        self.find_user_by_id(User.user_id)
-        self.db.query(User).delete()
+        target = self.find_user_by_id(request_user)
+        self.db.delete(target)
+        self.db.commit()
+        return "success"
 
     def find_all_users(self, page: int) -> List[User]:
-        print(f" page number is {page}")
         return self.db.query(User).all()
 
     def find_user_by_id(self, request_user: UserDTO) -> UserDTO:
@@ -52,11 +54,6 @@ class UserCrud(UserBase, ABC):
         user = User(**request_user.dict())
         db_user = self.db.query(User).filter(User.user_email == user.user_email).first()
         if db_user is not None:
-            return db_user.user_id
+            return db_user
         else:
             return ""
-
-
-
-
-

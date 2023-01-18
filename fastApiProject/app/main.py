@@ -69,14 +69,6 @@ async def join(userEmail:str):
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
 
-@app.post("/articles/write/")
-async def write():
-    return "write_article"
-
-@app.patch("/articles/update/")
-async def update():
-    pass
-
-@app.delete('/articles/delete/')
-async def delete():
-    return "delete"
+@app.post("/articles/register/")
+async def register():
+    return "register"

@@ -30,7 +30,7 @@ const LoginHomePage: NextPage<Props> = () => {
   //const userData: string = useSelector(userSelector)
   //const result: string = useAppSelector((state: AppState) => state.user.token || 'tess')
   useEffect(()=>{
-    alert(`6 session is ${localStorage.getItem("session")}`)
+    alert(`6 session is ${localStorage.getItem("session")}`) ///로그인 정보 흐름6
     const session:{
       user_id : '',
       user_email : '',

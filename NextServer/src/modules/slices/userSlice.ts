@@ -39,16 +39,16 @@ const userSlice = createSlice({
             state.data = [...state.data, payload]
         },
         loginRequest(state: UserState, action: PayloadAction<UserLoginInput>){
-            alert(` 1 ${JSON.stringify(action.payload)}`)
+            alert(` 1 ${JSON.stringify(action.payload)}`) ///로그인 정보 흐름1
             state.status = 'loading'
         },
         loginSuccess(state: UserState, {payload}){
             //alert(`&&&&&&&& loginSuccess >>>> payload is ${JSON.stringify(payload)}`)
-            alert(`4 token >>>> payload is ${payload.token}`)
+            alert(`4 token >>>> payload is ${payload.token}`) ///로그인 정보 흐름4
             state.status = 'idle'
             state.data = [...state.data, payload]
             state.token = payload.token
-            alert(`5 token >>>> state.token is ${state.token}`)
+            alert(`5 token >>>> state.token is ${state.token}`) ///로그인 정보 흐름5
         },
         loginFailure(state: UserState, {payload}){
             state.status = 'failed'

@@ -12,7 +12,7 @@ class UserBase(metaclass=ABCMeta):
     def add_user(self, request_user: UserDTO) -> str: pass
 
     @abstractmethod
-    def login(self, request_user: UserDTO) -> User: pass
+    def login_user(self, request_user: UserDTO) -> User: pass
 
     @abstractmethod
     def update_user(self, request_user: UserDTO) -> str: pass

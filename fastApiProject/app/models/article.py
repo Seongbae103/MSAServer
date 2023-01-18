@@ -16,7 +16,7 @@ class Article(Base, TimestampMixin):
     content = Column(String(30))
 
     user_id = Column(String(30), ForeignKey('users.user_id'), default=myuuid(), nullable=True) # foreingkey는 원래 null허용 ForeignKey('테이블명.primarykey')
-    user = relationship('User', back_populates='articles') #model.article의articles와 연결되는거 나타냄 user = relationship('User', bask_populates='연결되는 인스턴스')
+    user = relationship('User', back_populates='articles')                                     #model.article의articles와 연결되는거 나타냄 user = relationship('User', bask_populates='연결되는 인스턴스')
 
     class Config:
         arbitrary_types_allowed = True
