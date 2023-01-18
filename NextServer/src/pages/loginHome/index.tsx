@@ -7,47 +7,46 @@ import { AppState } from "@/modules/store"
 import {userSelector} from "@/modules/slices";
 import {useAppSelector} from "@/modules/store";
 
-interface Props{ user: string }
+interface Props{ article: string }
 
 const LoginHomePage: NextPage<Props> = () => {
 
   const [user, setUser] = useState({
-    user_id : '',
-    user_email : '',
+    userid : '',
+    email : '',
     password : '',
-    user_name : '',
+    username : '',
     phone : '',
     birth : '',
     address : '',
     job : '',
-    user_interests : '',
+    interests : '',
     token : '',
     created : '',
     modified : ''
-
   }) 
     /**const [token, setToken] = useState('')*/
   //const userData: string = useSelector(userSelector)
   //const result: string = useAppSelector((state: AppState) => state.user.token || 'tess')
-  useEffect(()=>{
-    alert(`6 session is ${localStorage.getItem("session")}`) ///로그인 정보 흐름6
+  /**useEffect(()=>{
+    alert(`6 session is ${localStorage.getItem("session")}`)
     const session:{
-      user_id : '',
-      user_email : '',
+      userid : '',
+      email : '',
       password : '',
-      user_name : '',
+      username : '',
       phone : '',
       birth : '',
       address : '',
       job : '',
-      user_interests : '',
+      interests : '',
       token : '',
       created : '',
       modified : ''
     } = JSON.parse(localStorage.getItem("session")||'{}')
     setUser(session)
   },[])
-
+*/
 
   return (<>
         
@@ -60,20 +59,20 @@ const LoginHomePage: NextPage<Props> = () => {
         <tbody>
           <Row>
             <Cell>
-              <label htmlFor="user_email">이메일(ID)</label></Cell>
+              <label htmlFor="email">이메일(ID)</label></Cell>
             <Cell> 
-              {user.user_email}
+             
             </Cell>
           </Row>
         <Row><Cell>
       <label htmlFor="password">비밀번호</label></Cell>
       <Cell>
-            </Cell>
+      </Cell>
           </Row>
          
           <Row>
             <Cell>
-              <label htmlFor="user_name">이름(실명)</label>
+              <label htmlFor="username">이름(실명)</label>
             </Cell>
             <Cell>
            
@@ -83,14 +82,14 @@ const LoginHomePage: NextPage<Props> = () => {
             <Cell>
             <label htmlFor="phone">전화번호</label></Cell>
             <Cell>
-            
+           
             </Cell>
           </Row>
           <Row>
             <Cell>
             <label htmlFor="birth">생년월일</label> </Cell>
             <Cell>
-              
+           
             </Cell>
           </Row>
           <Row>
@@ -105,11 +104,16 @@ const LoginHomePage: NextPage<Props> = () => {
           </Row>
           <Row>
             <Cell>
-            <label htmlFor="user_interests">관심사항</label></Cell>
+            <label htmlFor="interests">관심사항</label></Cell>
             <Cell>
             </Cell>
           </Row>
-          
+          <Row>
+            <Cell>
+            <label htmlFor="interests">토큰</label></Cell>
+            <Cell>
+            </Cell>
+          </Row>
           <Row>
             <Cell colSpan={2}><button type="submit" >수정하기</button></Cell>
           </Row>

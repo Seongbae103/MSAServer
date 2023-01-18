@@ -29,8 +29,10 @@ export const user = {
             await author.post('http://localhost:8000/users/login', payload)
             alert(`3 서버에서 리턴받은 값: ${JSON.stringify(response.data)}`) ///로그인 정보 흐름3
             localStorage.clear()
-            localStorage.setItem("session", JSON.stringify(response.data))
-            return response.data
+            const data = response.data 
+            localStorage.setItem("session", data.msg) ///로컬 스토리지의 세션에는 토큰만 저장한다 //토큰은 그 자체로 스트링이라 stringify를 안쓴다
+            alert(`API 스토리지의 토큰 ${localStorage.getItem("session")}`)
+            return data.msg
         }catch(err){
             return err;
         }

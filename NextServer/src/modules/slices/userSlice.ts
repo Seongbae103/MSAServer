@@ -18,7 +18,7 @@ const initialState: UserState = {
     status: 'idle',
     isLoggined: false,
     error: null,
-    token: 'original'
+    token: '' //테스트시에만 ''내부에 입력
 }
 
 const userSlice = createSlice({
@@ -54,7 +54,8 @@ const userSlice = createSlice({
             state.status = 'failed'
             state.data = [...state.data, payload]
         },
-        logoutRequest(state: UserState) {
+        logoutRequest(state: UserState, {payload}) {
+            alert(`5 token >>> state.token in ${payload.token}`)
             state.status = 'loading';
             state.error = null;
         },

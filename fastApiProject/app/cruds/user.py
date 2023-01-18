@@ -1,13 +1,14 @@
 from abc import ABC
 from typing import List
-from fastapi import HTTPException
-from app.admin.security import verify_password
+
+from app.admin.security import verify_password, generate_token, get_hashed_password
 from app.bases.user import UserBase
 from app.models.user import User
-from app.schemas.user import UserDTO
+from app.schemas.user import UserDTO, UserUpdate
 import pymysql
 from sqlalchemy.orm import Session
 pymysql.install_as_MySQLdb()
+
 
 class UserCrud(UserBase, ABC):
 
@@ -16,44 +17,99 @@ class UserCrud(UserBase, ABC):
 
     def add_user(self, request_user: UserDTO) -> str:
         user = User(**request_user.dict())
-        self.db.add(user)
-        self.db.commit()
-        return "success" #modules.apis.userAPI의 if(response.data === "success"){에 들어가는 내용
-
-    def login_user(self, request_user: UserDTO) -> UserDTO:
-        userid = self.find_userid_by_email(request_user)
-        verified = verify_password(plain_password = request_user.password,
-                                   hashed_password = target.password)
-        if verified:
-            return target
+        userid = self.find_userid_by_email(request_user=request_user)
+        if userid == "":
+            user.password = get_hashed_password(user.password)
+            is_success = self.db.add(user)
+            self.db.commit()
+            self.db.refresh(user)
+            message = "SUCCESS: 회원가입이 완료되었습니다" \
+                if is_success != 0 else "FAILURE: 비정상적인 이유로 회원가입이 실패하였습니다"
         else:
-            return None
+            message = "FAILURE: 이메일이 이미 존재합니다"
+        return message
 
-    def update_user(self, request_user: UserDTO) -> str:
-        update_data = request_user.dict(exclude_unset=True)
+    def login_user(self, request_user: UserDTO) -> User:
+        userid = self.find_userid_by_email(request_user=request_user)
+        if userid != "":
+            request_user.user_id = userid
+            db_user = self.find_user_by_id(request_user)
+            verified = verify_password(plain_password=request_user.password,
+                                       hashed_password=db_user.password)
+            if verified:
+                new_token = generate_token(request_user.user_email)
+                request_user.token = new_token
+                self.update_token(db_user, new_token)
+                return new_token
+            else:
+                return "FAILURE: 비밀번호가 일치하지 않습니다"
+        else:
+            return "FAILURE: 이메일 주소가 존재하지 않습니다"
 
-        lastrowid = self.db.update(update_data)
-        print(f" 수정완료 후 해당 ID : {lastrowid}")
+    def update_user(self, request_user: UserUpdate) -> str:
+        db_user = self.find_user_by_id_for_update(request_user)
+        for var, value in vars(request_user).items():
+            setattr(db_user, var, value) if value else None
+        is_success = self.db.add(db_user)
         self.db.commit()
-        return lastrowid
+        self.db.refresh(db_user)
+        return "" if is_success != 0 else ""
 
-    def delete_user(self, request_user: UserDTO):
-        target = self.find_user_by_id(request_user)
-        self.db.delete(target)
+    def update_token(self, db_user: User, new_token: str):
+        is_success = self.db.query(User).filter(User.user_id == db_user.user_id)\
+            .update({User.token: new_token}, synchronize_session=False)
         self.db.commit()
-        return "success"
+        self.db.refresh(db_user)
+        return "" if is_success != 0 else ""
 
-    def find_all_users(self, page: int) -> List[User]:
+    def reset_password(self, request_user: UserDTO):
+        user = User(**request_user.dict())
+
+        is_success = self.db.query(User).filter(User.user_id == user.user_id) \
+            .update({User.password: user.password}, synchronize_session=False)
+        get_hashed_password(is_success.password)
+        self.db.commit()
+        self.db.refresh(user)
+        return "" if is_success != 0 else ""
+
+    def delete_user(self, request_user: UserDTO) -> str:
+        user = self.find_user_by_id(request_user)
+
+        print(f"##########req {request_user}")
+        print(f"##########{user}")
+        is_success = self.db.query(User).filter(User.user_id == user.user_id). \
+            delete(user)
+        self.db.commit()
+        return "탈퇴 성공입니다." if is_success != 0 else "탈퇴 실패입니다."
+
+    def find_all_users_per_page(self, page: int) -> List[User]:
         return self.db.query(User).all()
 
-    def find_user_by_id(self, request_user: UserDTO) -> UserDTO:
+    def find_user_by_token(self, request_user: UserDTO) -> User:
         user = User(**request_user.dict())
-        return self.db.query(User).filter(User.user_id == user.user_id).first()
+        return self.db.query(User).filter(User.token == user.token).one_or_none()
+
+    def match_token(self, request_user: UserDTO) -> bool:
+        user = User(**request_user.dict())
+        db_user = self.db.query(User).filter(User.token == user.token).one_or_none()
+        return True if db_user != None else False
+
+    def find_user_by_id(self, request_user: UserDTO) -> User:
+        user = User(**request_user.dict())
+        return self.db.query(User).filter(User.user_id == user.user_id).one_or_none()
+
+    def find_user_by_id_for_update(self, request_user: UserUpdate) -> User:
+        user = User(**request_user.dict())
+        return self.db.query(User).filter(User.user_id == user.user_id).one_or_none()
 
     def find_userid_by_email(self, request_user: UserDTO) -> str:
         user = User(**request_user.dict())
-        db_user = self.db.query(User).filter(User.user_email == user.user_email).first()
+        db_user = self.db.query(User).filter(User.user_email == user.user_email).one_or_none()
         if db_user is not None:
-            return db_user
+            return db_user.user_id
         else:
             return ""
+
+    def find_users_by_job(self, search, page, db):
+        pass
+

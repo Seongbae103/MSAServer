@@ -18,7 +18,13 @@ export interface UserLoginInput{
     user_email: string,
     password: string
 }
-
+export interface UserUpdate{
+    userid?: string,
+    phone?: string,
+    job?: string,
+    interests?: string,
+    modified?: string
+}
 export interface LoginUser{ 
     user_name?:string, password:string, user_email:string, user_id?:string,
     phone?:string, birth?:string, 

@@ -1,20 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
+import Navbar from './Navbar';
+import NavbarAuth from './NavbarAuth';
 export default function Header(){
+  const [token, setToken] = useState("")    //상태에 저장 (setitem을 하는 장소는api)
+  useEffect(() => {                          // 열리면 바로 실행
+    alert(`토큰 유지 여부 ${localStorage.getItem('key')}`)
+    setToken(localStorage.getItem('session')||"")    // 로컬스토리지에 있는 session에서 가져옴
+  }, [])
     return (
       <><header>
-        {/* <Navigation/><br/> 
-        <HR/>
-        {localStorage.length > 0 ?
-        <div>
-            <Span>{JSON.parse(window.localStorage.getItem('sessionUser')).name}님 접속중 
-            <Logout/></Span> 
-        </div>
-        : <>
-        <Span><button onClick = {e => window.location.href = `/users/add`}>회원가입</button>
-        <button onClick = {e => window.location.href = `/users/login`}>로그인</button></Span>
-        </>}*/}
-        
+        {token === "" ? <Navbar/> : <NavbarAuth/>}
       </header>
       </>
     )

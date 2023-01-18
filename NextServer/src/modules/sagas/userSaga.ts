@@ -41,7 +41,7 @@ function* login(action: {payload: UserLoginInput}){
     try{
         alert(`2 사가 내부 : ${JSON.stringify(param)}` ) ///로그인 정보 흐름2
         const response: User = yield call(user.login, param)
-        yield put(loginSuccess(response))
+        yield put(loginSuccess(response)) ///여기 고침
         window.location.href = ('/loginHome')
     }catch(error){
         put(userAction.loginFailure(error))

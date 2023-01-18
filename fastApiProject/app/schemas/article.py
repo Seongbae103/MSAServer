@@ -14,3 +14,14 @@ class ArticleDTO(BaseModel):
 
     class Config:
         orm_mode = True
+
+class ArticleUpdate(BaseModel):
+    art_seq: Optional[str]
+    title: Optional[str]
+    content: Optional[str]
+    user_id: Optional[str]
+    modified: Optional[str]
+    token: Optional[str]
+
+    class Config:
+        orm_mode = True
