@@ -4,12 +4,12 @@ import { Login} from "@/components/user"
 import { UserLoginInput } from "@/modules/types"
 import { useDispatch } from "react-redux"
 import { loginRequest } from "@/modules/slices"
-import {useAppDispatch} from '@/hooks'
+import {useAppDispatch, useAppSelector} from '@/hooks'
 
 
 
 const LoginPage: NextPage = function(){
-    const [loginInfo, setLoginInfo] = useState<UserLoginInput>({user_email : '', password: ''})
+    const [loginInfo, setLoginInfo] = useState<UserLoginInput>({email : '', password: ''})
     const dispatch = useAppDispatch()
 
     const onChange = (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => {
@@ -19,6 +19,7 @@ const LoginPage: NextPage = function(){
     }
     const onSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
+        
         dispatch(loginRequest(loginInfo))
     }
     return (

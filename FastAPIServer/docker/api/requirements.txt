@@ -1,0 +1,11 @@
+mysqlclient
+sqlalchemy
+uvicorn
+fastapi
+pymysql
+pandas
+sqlalchemy-utils
+fastapi-sqlalchemy
+pyjwt
+shortuuid
+passlib

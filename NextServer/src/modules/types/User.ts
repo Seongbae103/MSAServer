@@ -1,21 +1,20 @@
 export interface User{
-    user_id? : string,
-    user_email? : string,
+    userid? : string,
+    email? : string,
     password? : string,
     cpassword?: string, 
-    user_name? : string,
+    username? : string,
     phone? : string,
     birth? : string,
     address? : string,
     job? : string,
-    user_interests? : string,
-    token? : string
+    interests? : string,
+    token? : string,
     created? : string,
     modified? : string
 }
-
 export interface UserLoginInput{
-    user_email: string,
+    email: string,
     password: string
 }
 export interface UserUpdate{
@@ -26,13 +25,13 @@ export interface UserUpdate{
     modified?: string
 }
 export interface LoginUser{ 
-    user_name?:string, password:string, user_email:string, user_id?:string,
+    username?:string, password:string, email:string, userid?:string,
     phone?:string, birth?:string, 
     token?: any
 }
 
 export interface UserInfo{
-    user_name:string, password:string, user_email:string,
+    username:string, password:string, email:string,
     phone:string, birth:string,
     token: any
 }

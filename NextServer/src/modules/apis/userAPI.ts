@@ -13,11 +13,10 @@ export const user = {
                     Authorization: "JWT fefege...",
                 }})
                 if(response.data === "success"){
-                    alert(' 결과: API 내부 join 성공'+ JSON.stringify(response.data))
+                    alert(' 결과: API 내부 join 성공  '+ JSON.stringify(response.data))
                 }else{
-                    alert(' 결과: ${response.data.msg}')
+                    alert(` 결과: ${response.data.msg}  `)
                 }
-                
                 return response
             }catch(err){
                 console.log(` ${currentTime} : userSaga 내부에서 join 실패 `)
@@ -27,19 +26,20 @@ export const user = {
         try{
             const response : AxiosResponse<any, User[]> =
             await author.post('http://localhost:8000/users/login', payload)
-            alert(`3 서버에서 리턴받은 값: ${JSON.stringify(response.data)}`) ///로그인 정보 흐름3
+            alert(`4 API payload is ${JSON.stringify(response.data)}`)
             localStorage.clear()
-            const data = response.data 
-            localStorage.setItem("session", data.msg) ///로컬 스토리지의 세션에는 토큰만 저장한다 //토큰은 그 자체로 스트링이라 stringify를 안쓴다
-            alert(`API 스토리지의 토큰 ${localStorage.getItem("session")}`)
+            const data = response.data
+            localStorage.setItem("session", data.msg)
+            alert(`API 스토리지에 저장된 토큰 ${localStorage.getItem("session")}`)
             return data.msg
         }catch(err){
             return err;
         }
     },
-    async logout(){
+    async logout(payload: User){
         try{
-            await client.post('/users/logout')
+            const response : AxiosResponse = await client.post('/users/logout', payload)
+            return response.data
         } catch(err){
             console.log(err)
             return err;

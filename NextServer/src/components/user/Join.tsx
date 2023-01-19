@@ -26,9 +26,9 @@ export default function Join() {
             <tbody>
               <Row>
                 <Cell>
-                <label htmlFor="user_email">이메일(ID)</label></Cell>
+                <label htmlFor="email">이메일(ID)</label></Cell>
                 <Cell><Input 
-            {...register("user_email", { 
+            {...register("email", { 
               required: true,
               maxLength: 30,
               pattern: {
@@ -36,11 +36,11 @@ export default function Join() {
                   message: "이메일 형식에 맞게 입력해주세요"
               }
           })}
-            type="text"  id="user_email" name="user_email" 
+            type="text"  id="email" name="email" 
             placeholder="name@example.com"
             required minLength= {10} maxLength={20}/> <br/>
             
-            {errors.user_email && <p>{errors.user_email.message}</p>} </Cell></Row>
+            {errors.email && <p>{errors.email.message}</p>} </Cell></Row>
             <Row><Cell>
           <label htmlFor="password">비밀번호</label></Cell>
           <Cell><Input 
@@ -76,9 +76,9 @@ export default function Join() {
              
               <Row>
                 <Cell>
-                <label htmlFor="user_name">이름(실명)</label></Cell><Cell>
+                <label htmlFor="username">이름(실명)</label></Cell><Cell>
           <Input
-          {...register("user_name", { 
+          {...register("username", { 
             required: true, 
             maxLength: {
                 value: 20,
@@ -86,10 +86,10 @@ export default function Join() {
             }
         })}
           
-          type="text" id="user_name" name="user_name" 
+          type="text" id="username" name="username" 
           placeholder="사용자 이름"
           required /> 
-        {errors.user_name && <p>{errors.user_name.message}</p>}
+        {errors.username && <p>{errors.username.message}</p>}
                 </Cell>
               </Row>
               <Row>
@@ -137,8 +137,8 @@ export default function Join() {
               </Row>
               <Row>
                 <Cell>
-                <label htmlFor="user_interests">관심사항</label></Cell>
-                <Cell><Input type="text" id="user_interests" name="user_interests" /> 
+                <label htmlFor="interests">관심사항</label></Cell>
+                <Cell><Input type="text" id="interests" name="interests" /> 
                 </Cell>
               </Row>
               <Row>

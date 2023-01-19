@@ -5,17 +5,14 @@ import logger from 'redux-logger';
 import createSagaMiddleware from 'redux-saga'
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import userReducer from '@/modules/slices/userSlice'
-import articleReducer from '@/modules/slices/articleSlice'
 
 
 const isDev = process.env.NODE_ENV ==='development'
 const sagaMiddleware = createSagaMiddleware()
 
 const combinedReducer = combineReducers({
-    user: userReducer,
-    article : articleReducer
+    user: userReducer
 })
-
 const rootReducer = (
 	state: ReturnType<typeof combinedReducer>,
     action: AnyAction
@@ -32,7 +29,7 @@ const rootReducer = (
 const makeStore = () =>{
     const store = 
     configureStore({
-        reducer:{ user: userReducer, article : articleReducer },  //15번 줄의 combinedReducer와 같아야한다
+        reducer:{ user : userReducer },
         middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware({serializableCheck: false})
             .prepend(sagaMiddleware)
@@ -49,5 +46,5 @@ const store = rootReducer;
 export type AppState = ReturnType<typeof rootReducer>;
 export type AppDispatch = ReturnType<typeof store>["dispatch"];
 export const useAppSelector: TypedUseSelectorHook<AppState> = useSelector;
-export const wrapper = createWrapper(makeStore)
+export const wrapper = createWrapper(makeStore, {debug: isDev})
 export default store;

@@ -18,15 +18,14 @@ const initialState: UserState = {
     status: 'idle',
     isLoggined: false,
     error: null,
-    token: '' //테스트시에만 ''내부에 입력
+    token: ''
 }
 
 const userSlice = createSlice({
-    name: 'userSlice',
+    name: 'user',
     initialState,
     reducers: {
         joinRequest(state: UserState, action: PayloadAction<User>){
-            alert(`2 joinRequest ${JSON.stringify(action.payload)}`)
             state.status = 'loading'
             state.error = null
         },
@@ -38,26 +37,24 @@ const userSlice = createSlice({
             state.status = 'failed'
             state.data = [...state.data, payload]
         },
-        loginRequest(state: UserState, action: PayloadAction<UserLoginInput>){
-            alert(` 1 ${JSON.stringify(action.payload)}`) ///로그인 정보 흐름1
+        loginRequest(state: UserState,action: PayloadAction<UserLoginInput>){
             state.status = 'loading'
         },
         loginSuccess(state: UserState, {payload}){
-            //alert(`&&&&&&&& loginSuccess >>>> payload is ${JSON.stringify(payload)}`)
-            alert(`4 token >>>> payload is ${payload.token}`) ///로그인 정보 흐름4
             state.status = 'idle'
             state.data = [...state.data, payload]
             state.token = payload.token
-            alert(`5 token >>>> state.token is ${state.token}`) ///로그인 정보 흐름5
+            
         },
         loginFailure(state: UserState, {payload}){
             state.status = 'failed'
             state.data = [...state.data, payload]
         },
         logoutRequest(state: UserState, {payload}) {
-            alert(`5 token >>> state.token in ${payload.token}`)
+            alert(`5 token >>>> state.token is ${payload}`)
             state.status = 'loading';
             state.error = null;
+            state.token = ''
         },
         logoutSuccess(state: UserState ){
             state.status = 'idle'
