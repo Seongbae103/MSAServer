@@ -9,7 +9,7 @@ class User(Base, TimestampMixin): # Base
 
     __tablename__="users"
 
-    userid = Column(String(30), primary_key=True, default=myuuid())
+    userid = Column(String(30), primary_key=True)
     email = Column(String(50), unique=True, nullable=False)
     password = Column(String(100), nullable=False)
     username = Column(String(20), nullable=False)

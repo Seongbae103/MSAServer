@@ -6,26 +6,63 @@ import Pagination from "./admin/Pagination";
 
 export default function Home(){
 
-   const [currentPage, setCurrentPage] = useState(1);
-   const lastPage = 3;
    const [list, setList] = useState([])
-   const [count, setCount] = useState(0)
+   const [rowCnt, setRowCnt] = useState(0)
+   const [requestPage, setRequestPage] = useState(0)
+   const [startRowPerPage, setStartRowPerPage] = useState(0)
+   const [endRowPerPage, setEndRowPerPage] = useState(0)
+   const [startPagePerBlock, setStartPagePerBlock] = useState(0)
+   const [endPagePerBlock, setEndPagePerBlock] = useState(0)
+   const [rows, setRows] = useState<number[]>([])
+   const [pages, setPages] = useState<number[]>([])
+   const [prevArrow, setPrevArrow] = useState(false)
+   const [nextArrow, setNextArrow] = useState(false)
 
     useEffect(()=>{
         axios
-        .get('http://localhost:8000/users/page/1')
+        .get('http://localhost:8000/users/page/18')
         .then(res => {
-            const count = res.data.count
-            const items = res.data.pager.items
-            setCount(count)
-            setList(items)
+            setRowCnt(Number(res.data.pager.row_cnt)) //res.data~는 fast에서 받아온 값
+            setStartRowPerPage(Number(res.data.pager.start_row_per_page))
+            setEndRowPerPage(Number(res.data.pager.end_row_per_page))
+            setStartPagePerBlock(Number(res.data.pager.start_page_per_block))
+            setEndPagePerBlock(Number(res.data.pager.end_page_per_block))
+            setRequestPage(Number(res.data.pager.request_page))
+            alert(` 사용자가 요청한 페이지 번호: ${requestPage}`)
+            console.log(` 사용자가 요청한 페이지 번호: ${requestPage}`)
+            console.log(` 페이지 시작 행번호: ${startRowPerPage}`)
+            console.log(` 페이지 마지막 행번호: ${endRowPerPage}`)
+            console.log(` 블록 시작 페이지번호: ${startPagePerBlock}`)
+            console.log(` 블록 마지막 페이지번호: ${endPagePerBlock}`)
+            setList(res.data.users.items)
+            console.log(" ### 페이지 내용 표시 ### ")
+            let rows:number[] = []
+            let pages:number[] = []
+            for(let i =startRowPerPage; i <= endRowPerPage; i++){
+                console.log(`page index : ${i}`)
+                rows.push(i)
+            }
+            setRows(rows)
+            console.log(" ### 블록 내용 표시 ### ")
+            for(let i =startPagePerBlock; i <= endPagePerBlock; i++){
+              console.log(`block index : ${i}`)
+              pages.push(i)
+           }
+           setPages(pages)
+           setPrevArrow(res.data.pager.prev_arrow)
+           setNextArrow(res.data.pager.next_arrow)
+          
         })
         .catch(err => {console.log(err)})
     }, [])
 
   return (
     <>
-    <h2>회원목록 총{count}명</h2>
+    <h2>회원목록 </h2>
+    <h6>회원수: {rowCnt}</h6>
+    <h6></h6>
+    <h6></h6>
+    <h6></h6>
         <table className='user-list'>
             <thead>
                 <tr>
@@ -41,16 +78,17 @@ export default function Home(){
                     <td>{job}</td><td>{interests}</td>
                 </tr>
             ))}
+            
             </tbody>
         </table>
+        { prevArrow && <span> 이전 </span>}
+        <div>
+          
+          {pages && pages.map((v, i) => (<span style={{"border": "1px solid black"}} >{v+1}</span>))}
+          
+        </div>
+        { nextArrow && <span> 이후 </span>}
         <div className="page-container">
-      <h1>React TypeScript Pagination</h1>
-      <Pagination
-        currentPage={currentPage}
-        lastPage={lastPage}
-        maxLength={7}
-        setCurrentPage={setCurrentPage}
-      />
     </div>
     </>
     

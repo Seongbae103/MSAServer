@@ -1,3 +1,6 @@
+# FastApiProject는 faker나 pagination 미적용
+
+
 <div align="center">
   <p>
     <a align="center" href="https://ultralytics.com/yolov5" target="_blank">

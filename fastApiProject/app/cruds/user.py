@@ -29,6 +29,20 @@ class UserCrud(UserBase, ABC):
             message = "FAILURE: 이메일이 이미 존재합니다"
         return message
 
+    def add_user(self, request_user: UserDTO) -> str:
+        user = User(**request_user.dict())
+        userid = self.find_userid_by_email(request_user=request_user)
+        if userid == "":
+            user.password = get_hashed_password(user.password)
+            is_success = self.db.add(user)
+            self.db.commit()
+            self.db.refresh(user)
+            message = "SUCCESS: 회원가입이 완료되었습니다" \
+                if is_success != 0 else "FAILURE: 비정상적인 이유로 회원가입이 실패하였습니다"
+        else:
+            message = "FAILURE: 이메일이 이미 존재합니다"
+        return message
+
     def login_user(self, request_user: UserDTO) -> str:
         userid = self.find_userid_by_email(request_user=request_user)
         if userid != "":

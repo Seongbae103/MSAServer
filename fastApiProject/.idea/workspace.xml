@@ -2,30 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76dc5541-029b-4959-abde-42b067dc0259" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/admin/paginator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/src/components/user/List.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/components/user/List.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/src/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../NextServer/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../NextServer/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FastAPIServer/app/admin/my_faker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FastAPIServer/app/schemas/builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPIServer/app/admin/pagination.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPIServer/app/admin/pagination.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPIServer/app/admin/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPIServer/app/admin/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPIServer/app/cruds/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPIServer/app/cruds/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPIServer/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPIServer/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPIServer/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPIServer/app/schemas/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FastAPIServer/docker/api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../FastAPIServer/docker/api/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87320fa7-9c6e-4f27-8c3b-31456099771a/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/security.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/security.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/bases/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/bases/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/cruds/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/cruds/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/article.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routers/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routers/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/api/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docker/api/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/mysql/initdb.d/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/mysql/initdb.d/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,6 +218,7 @@
       <workItem from="1674001613716" duration="28446000" />
       <workItem from="1674106424929" duration="13098000" />
       <workItem from="1674120013336" duration="635000" />
+      <workItem from="1674193631449" duration="2351000" />
     </task>
     <servers />
   </component>

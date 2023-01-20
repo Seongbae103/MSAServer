@@ -3,6 +3,8 @@ from fastapi.encoders import jsonable_encoder
 from fastapi_pagination import Page, paginate, add_pagination, Params
 from sqlalchemy.orm import Session
 from starlette.responses import JSONResponse, RedirectResponse
+
+from app.admin.utils import paging
 from app.cruds.user import UserCrud
 from app.database import get_db
 from app.schemas.user import UserDTO, UserUpdate, UserList
@@ -71,8 +73,9 @@ async def get_users_per_page(page: int, db: Session = Depends(get_db)):
     print(f" ----> page_result type is {type(page_result)}")
     print(f" ----> page_result is {page_result}")
     count = UserCrud(db).count_all_users()
-    print(f" count : {count}")
-    dc = {"count":count,"pager":page_result }
+    pager = paging(request_page=page, row_cnt=count)
+    dc = {"pager":pager,
+          "users":page_result } # items가 키값이므로 users.items
     return JSONResponse(status_code=200,
                         content=jsonable_encoder(dc))
 

@@ -7,7 +7,7 @@ services:
     restart: always
     tty: true
     environment:
-      MYSQL_DATABASE: mydb
+      MYSQL_DATABASE: sbdb
       MYSQL_ROOT_PASSWORD: root
       MYSQL_ROOT_HOST: root
     expose:
@@ -24,7 +24,7 @@ services:
   api:
     links:
       - db
-    container_name: "api"
+    container_name: "sbapi"
     build: ./docker/api
     ports:
       - "8000:8000"

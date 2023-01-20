@@ -1,6 +1,5 @@
 import uvicorn
 from fastapi_pagination import add_pagination
-
 global API_TOKEN, router, app
 import os
 import sys
@@ -14,8 +13,8 @@ sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 baseurl = os.path.dirname(os.path.abspath(__file__))
 from fastapi import FastAPI, APIRouter, Depends, HTTPException
 from .routers.user import router as user_router
-from .routers.article import router as article_router
-from .test.user import router as test_router
+from .routers.article import router as article_router  # 해당 경로에 있는 APIrouter()와 파일명이 합쳐져서 만들어짐
+from .admin.pagination import router as pagination_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 API_TOKEN = "SECRET_API_TOKEN"
@@ -24,7 +23,7 @@ print(f" ################ app.main Started At {current_time()} #################
 router = APIRouter()
 router.include_router(user_router, prefix="/users", tags=["users"])
 router.include_router(article_router, prefix="/articles", tags=["articles"])
-router.include_router(test_router, prefix="/test", tags=["test"])
+router.include_router(pagination_router, prefix="/pagination", tags=["pagination"])
 app = FastAPI()
 add_pagination(app)
 origins = ["http://localhost:3000"]
