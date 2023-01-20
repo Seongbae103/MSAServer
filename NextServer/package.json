@@ -72,6 +72,7 @@
     "next": "12.1.6",
     "next-auth": "^4.3.4",
     "next-redux-wrapper": "^7.0.5",
+    "node": "^19.4.0",
     "node-sass": "^7.0.1",
     "notistack": "^2.0.5",
     "path-to-regexp": "^6.2.1",

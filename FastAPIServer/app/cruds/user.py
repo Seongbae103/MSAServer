@@ -78,9 +78,8 @@ class UserCrud(UserBase, ABC):
         self.db.commit()
         return  "탈퇴 성공입니다." if is_success != 0 else "탈퇴 실패입니다."
 
-    def find_all_users_per_page(self, page: int) -> List[User]:
-        print(f" page number is {page}")
-        return self.db.query(User).all()
+    def find_all_users_order_by_created(self) -> List[User]:
+        return self.db.query(User).order_by(User.created).all()
 
     def find_user_by_token(self, request_user: UserDTO) -> User:
         user = User(**request_user.dict())
@@ -118,6 +117,8 @@ class UserCrud(UserBase, ABC):
         print(f"토큰 삭제되면 1 리턴 예상함 : {is_success}")
         return "LOGOUT"
 
+    def count_all_users(self) -> int:
+        return self.db.query(User).count()
 
 
 

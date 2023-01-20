@@ -1,10 +1,11 @@
 from fastapi import APIRouter, Depends
 from fastapi.encoders import jsonable_encoder
+from fastapi_pagination import Page, paginate, add_pagination, Params
 from sqlalchemy.orm import Session
 from starlette.responses import JSONResponse, RedirectResponse
 from app.cruds.user import UserCrud
 from app.database import get_db
-from app.schemas.user import UserDTO, UserUpdate
+from app.schemas.user import UserDTO, UserUpdate, UserList
 
 router = APIRouter()
 
@@ -62,12 +63,25 @@ async def remove_user(dto: UserDTO, db: Session = Depends(get_db)):
     else:
         RedirectResponse(url='/no-match-token', status_code=302)
 
-@router.get("/page/{page}")
+@router.get("/page/{page}",response_model=Page[UserList])
 async def get_users_per_page(page: int, db: Session = Depends(get_db)):
+    results = UserCrud(db).find_all_users_order_by_created()
+    default_size = 5
+    page_result = paginate(results, Params(page=page, size=default_size))
+    print(f" ----> page_result type is {type(page_result)}")
+    print(f" ----> page_result is {page_result}")
+    count = UserCrud(db).count_all_users()
+    print(f" count : {count}")
+    dc = {"count":count,"pager":page_result }
     return JSONResponse(status_code=200,
-                        content=jsonable_encoder(
-                            UserCrud(db).find_all_users_per_page(page)))
+                        content=jsonable_encoder(dc))
 
+@router.get("/page/{page}/size/{size}",response_model=Page[UserList])
+async def get_users_changed_size(page: int,size: int, db: Session = Depends(get_db)):
+    results = UserCrud(db).find_all_users_order_by_created()
+    page_result = paginate(results, Params(page=page, size=size))
+    return JSONResponse(status_code=200,
+                        content=jsonable_encoder(page_result))
 
 @router.get("/job/{search}/{page}")
 async def get_users_by_job(search:str, page: int, db: Session = Depends(get_db)):
@@ -75,3 +89,4 @@ async def get_users_by_job(search:str, page: int, db: Session = Depends(get_db))
                         content=jsonable_encoder(
                             UserCrud(db).find_users_by_job(search, page)))
 
+add_pagination(router)
