@@ -1,14 +1,9 @@
 export interface User{
-    userid? : string,
+    userID? : string,
     email? : string,
     password? : string,
-    cpassword?: string, 
-    username? : string,
-    phone? : string,
     birth? : string,
     address? : string,
-    job? : string,
-    interests? : string,
     token? : string,
     created? : string,
     modified? : string
@@ -18,20 +13,19 @@ export interface UserLoginInput{
     password: string
 }
 export interface UserUpdate{
-    userid?: string,
+    userID?: string,
     phone?: string,
-    job?: string,
-    interests?: string,
+    password? : string,
     modified?: string
 }
 export interface LoginUser{ 
-    username?:string, password:string, email:string, userid?:string,
+    userID?:string, password:string, email:string, 
     phone?:string, birth?:string, 
     token?: any
 }
 
 export interface UserInfo{
-    username:string, password:string, email:string,
+    userID?: string, password:string, email:string,
     phone:string, birth:string,
     token: any
 }
