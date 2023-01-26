@@ -19,7 +19,8 @@ docs_build
 venv
 docs.zip
 archive.zip
-app/env.py #db가 그대로 노출되지 않게 필수로 넣어준다
+
+app/env.py
 app/env_localhost.py
 docker/api/Dockerfile
 # vim temporary files
