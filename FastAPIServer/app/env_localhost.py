@@ -1,6 +1,6 @@
-USERNAME = "mydb"
-PASSWORD = "rootroot"
-HOSTNAME = "mydb.cmbubf06nq4s.ap-northeast-2.rds.amazonaws.com"
+USERNAME = "root"
+PASSWORD = "root"
+HOSTNAME = "host.docker.internal" # "localhost"
 DATABASE = "mydb"
 PORT = 3306
 CHARSET = "utf8"
