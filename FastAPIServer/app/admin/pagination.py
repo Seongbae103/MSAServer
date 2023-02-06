@@ -71,7 +71,7 @@ def paging(request_page: int, db: Session = Depends(get_db)):
 
     print(f" count is {row_cnt}")
     return JSONResponse(status_code=200,
-                        content=dict(
+                        data=dict(
                             msg=row_cnt))
         '''
 

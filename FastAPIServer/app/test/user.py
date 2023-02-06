@@ -23,7 +23,7 @@ def create_upload_files(files: List[UploadFile] = File(...)):
 
 @router.get("/files")
 async def upload_file():
-    content = """
+    data = """
     <body>
     <form action="/files/" enctype="multipart/form-data" method="post">
     <input name="files" type="file" multiple>
@@ -35,7 +35,7 @@ async def upload_file():
     </form>
     </body>
         """
-    return HTMLResponse(content=content)
+    return HTMLResponse(data=data)
 '''
 @router.get("/register")
 async def join():

@@ -20,8 +20,8 @@ venv
 docs.zip
 archive.zip
 
+app/env_aws.py
 app/env.py
-app/env_localhost.py
 docker/api/Dockerfile
 # vim temporary files
 *~

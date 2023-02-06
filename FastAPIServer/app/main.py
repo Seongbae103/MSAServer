@@ -7,7 +7,7 @@ import logging
 from fastapi_sqlalchemy import DBSessionMiddleware
 from starlette.responses import HTMLResponse
 from .admin.utils import current_time
-from .env_localhost import DB_URL
+from .env import DB_URL
 from app.database import init_db
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 baseurl = os.path.dirname(os.path.abspath(__file__))
@@ -17,7 +17,7 @@ from .routers.article import router as article_router  # 해당 경로에 있는
 from .admin.pagination import router as pagination_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
-from mangum import Mangum
+
 
 API_TOKEN = "SECRET_API_TOKEN"
 api_key_header = APIKeyHeader(name="Token")
@@ -72,4 +72,4 @@ async def say_hello(name: str):
 async def no_match_token():
     return {"message": f"토큰 유효시간이 지났습니다."}
 
-handler = Mangum(app)
+ # handler = Mangum(app) 아마존에서 쓴다
