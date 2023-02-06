@@ -1,5 +1,5 @@
 from PyKakao import KoGPT
-api = KoGPT(service_key = "69ee1fc86ceb03faa2d3dbc66b79f12a")
+api = KoGPT(service_key = "api 삭제 필수") #api 삭제 필수
 
 class KakaoCahtbot():
     def __init__(self):
