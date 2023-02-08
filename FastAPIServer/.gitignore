@@ -26,3 +26,4 @@ docker/api/Dockerfile
 # vim temporary files
 *~
 .*.sw?
+.ts

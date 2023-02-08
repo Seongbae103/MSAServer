@@ -1,11 +1,10 @@
-from starlette.responses import JSONResponse
 from faker import Faker
 from app.admin.utils import between_random_date
-from app.database import get_db
-from app.cruds.user import UserCrud
+from app.config.database import get_db
+from app.cruds.author.user import UserCrud
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends
-from app.schemas.user import UserDTO
+from app.schemas.author.user import UserDTO
 
 router = APIRouter()
 

@@ -1,20 +1,25 @@
-import uvicorn
 from fastapi_pagination import add_pagination
+
+from app.config.database import init_db
+from app.config.env import DB_URL
+from app.utils.common.time import current_time
+
 global API_TOKEN, router, app
 import os
 import sys
 import logging
 from fastapi_sqlalchemy import DBSessionMiddleware
 from starlette.responses import HTMLResponse
-from .admin.utils import current_time
-from .env import DB_URL
-from app.database import init_db
+
+
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 baseurl = os.path.dirname(os.path.abspath(__file__))
 from fastapi import FastAPI, APIRouter, Depends, HTTPException
-from .routers.user import router as user_router
-from .routers.article import router as article_router  # 해당 경로에 있는 APIrouter()와 파일명이 합쳐져서 만들어짐
-from .admin.pagination import router as pagination_router
+from app.routers.author.user import router as user_router
+from app.routers.board.article import router as article_router
+from app.routers.chatbot.chat_socket import router as socket_router
+from app.routers.common.page import router as page_router
+#from app.tests.author.user import router as test_router
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import APIKeyHeader
 
@@ -25,7 +30,9 @@ print(f" ################ app.main Started At {current_time()} #################
 router = APIRouter()
 router.include_router(user_router, prefix="/users", tags=["users"])
 router.include_router(article_router, prefix="/articles", tags=["articles"])
-router.include_router(pagination_router, prefix="/pagination", tags=["pagination"])
+#router.include_router(test_router, prefix="/test", tags=["test"])
+router.include_router(socket_router, prefix="/chatbot", tags=["chatbot"])
+router.include_router(page_router, prefix="/page", tags=["page"])
 app = FastAPI()
 add_pagination(app)
 origins = ["http://localhost:3000"]
@@ -72,4 +79,4 @@ async def say_hello(name: str):
 async def no_match_token():
     return {"message": f"토큰 유효시간이 지났습니다."}
 
- # handler = Mangum(app) 아마존에서 쓴다
+# handler = Mangum(app)
